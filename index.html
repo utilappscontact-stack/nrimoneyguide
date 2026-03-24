@@ -3,870 +3,517 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NRI Money Guide — Plain-English Tax & Investment Guides for Indians Living Abroad</title>
-  <meta name="description" content="Plain-English tax and investment guides for Indians living abroad. Budget 2025 updates, NRE vs NRO, ITR filing, DTAA, and more." />
-  <link rel="canonical" href="https://nrimoneyguide.com" />
-
-  <!-- Open Graph -->
+  <title>NRI Money Guide — Tax & Investment Guides for Indians Living Abroad 2026</title>
+  <meta name="description" content="Budget 2026 changes for NRIs: new Income Tax Act from April 1, FAST-DS amnesty, higher PIS limits, TAN removal. Plus ITR filing, NRE vs NRO, DTAA guides updated for FY 2026-27." />
+  <link rel="canonical" href="https://nrimoneyguide.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="NRI Money Guide" />
-  <meta property="og:title" content="NRI Money Guide — Tax & Investment Guides for Indians Abroad" />
-  <meta property="og:description" content="Plain-English tax and investment guides for Indians living abroad. Budget 2025 updates, NRE vs NRO, ITR filing, DTAA, and more." />
-  <meta property="og:url" content="https://nrimoneyguide.com" />
+  <meta property="og:title" content="NRI Money Guide — Budget 2026 Changes for NRIs Explained" />
+  <meta property="og:description" content="Budget 2026: new Income Tax Act April 1, FAST-DS amnesty, higher PIS limits. Plus ITR filing, NRE vs NRO, DTAA guides updated for FY 2026-27." />
+  <meta property="og:url" content="https://nrimoneyguide.com/" />
   <meta property="og:image" content="https://nrimoneyguide.com/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NRI Money Guide — Tax & Investment Guides for Indians Abroad" />
-  <meta name="twitter:description" content="Plain-English tax and investment guides for Indians living abroad." />
-  <meta name="twitter:image" content="https://nrimoneyguide.com/og-image.png" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
   <style>
-    /* ── Reset & Variables ───────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --primary:   #1B2B5E;
-      --accent:    #C9962A;
-      --surface:   #FAFAF8;
-      --text:      #1A1A1A;
-      --muted:     #666666;
-      --border:    #E0DDD5;
-      --white:     #ffffff;
+      --primary: #1B2B5E; --accent: #C9962A; --surface: #FAFAF8;
+      --text: #1A1A1A; --muted: #666666; --border: #E0DDD5; --white: #ffffff;
       --font-head: 'DM Serif Display', Georgia, serif;
       --font-body: 'Inter', system-ui, sans-serif;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
-      --shadow-lg: 0 8px 32px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.06);
-      --radius:    10px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.10);
+      --radius: 10px;
     }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--surface);
-      -webkit-font-smoothing: antialiased;
-    }
-
+    body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--text); background: var(--surface); -webkit-font-smoothing: antialiased; }
     a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-    img { display: block; max-width: 100%; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
-    /* ── Utility ─────────────────────────────────────────────── */
-    .container {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* ── NAV ─────────────────────────────────────────────────── */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .nav__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .nav__logo {
-      font-family: var(--font-head);
-      font-size: 1.35rem;
-      color: var(--primary);
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-    }
-
-    .nav__logo span {
-      color: var(--accent);
-    }
-
-    .nav__links {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-    }
-
-    .nav__links a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--text);
-      padding: 6px 14px;
-      border-radius: 6px;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .nav__links a:hover {
-      background: var(--surface);
-      color: var(--primary);
-    }
-
-    .nav__hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      width: 36px;
-      height: 36px;
-      cursor: pointer;
-      border: none;
-      background: none;
-      padding: 4px;
-      border-radius: 6px;
-      transition: background 0.15s;
-    }
-
-    .nav__hamburger:hover { background: var(--surface); }
-
-    .nav__hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: transform 0.25s, opacity 0.25s;
-    }
-
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav__logo { font-family: var(--font-head); font-size: 1.35rem; color: var(--primary); white-space: nowrap; }
+    .nav__logo span { color: var(--accent); }
+    .nav__links { display: flex; align-items: center; gap: 2px; }
+    .nav__links a { font-size: 0.875rem; font-weight: 500; color: var(--text); padding: 6px 14px; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+    .nav__links a:hover { background: var(--surface); color: var(--primary); }
+    .nav__tool-link { font-size: 0.8rem !important; font-weight: 600 !important; color: var(--accent) !important; border: 1.5px solid var(--accent); padding: 5px 12px !important; border-radius: 6px; margin-left: 6px; transition: background 0.15s; }
+    .nav__tool-link:hover { background: var(--accent); color: var(--white) !important; }
+    .nav__hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; border: none; background: none; padding: 4px; border-radius: 6px; }
+    .nav__hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
     .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav__hamburger.open span:nth-child(2) { opacity: 0; }
     .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .nav__mobile {
-      display: none;
-      flex-direction: column;
-      border-top: 1px solid var(--border);
-      padding: 12px 0 16px;
-    }
-
+    .nav__mobile { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 12px 0 16px; }
     .nav__mobile.open { display: flex; }
-
-    .nav__mobile a {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text);
-      padding: 10px 24px;
-      transition: background 0.15s, color 0.15s;
-    }
-
-    .nav__mobile a:hover {
-      background: var(--surface);
-      color: var(--primary);
-    }
-
-    /* ── HERO ────────────────────────────────────────────────── */
-    .hero {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 72px 0 64px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Subtle geometric background detail */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -80px;
-      right: -100px;
-      width: 520px;
-      height: 520px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,150,42,0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -120px;
-      left: -60px;
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(27,43,94,0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero__inner {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-    }
-
-    .hero__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent);
-      background: rgba(201,150,42,0.1);
-      border: 1px solid rgba(201,150,42,0.25);
-      padding: 4px 12px;
-      border-radius: 99px;
-      margin-bottom: 24px;
-    }
-
-    .hero__badge::before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-
-    .hero__h1 {
-      font-family: var(--font-head);
-      font-size: clamp(2rem, 4.5vw, 3.25rem);
-      line-height: 1.15;
-      color: var(--primary);
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-
-    .hero__sub {
-      font-size: 1.1rem;
-      color: var(--muted);
-      line-height: 1.65;
-      margin-bottom: 36px;
-      max-width: 580px;
-    }
-
-    .hero__ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-body);
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 12px 24px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: transform 0.15s, box-shadow 0.15s, background 0.15s, border-color 0.15s;
-      border: 2px solid transparent;
-      white-space: nowrap;
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .btn--primary {
-      background: var(--primary);
-      color: var(--white);
-      box-shadow: 0 2px 8px rgba(27,43,94,0.25);
-    }
-
-    .btn--primary:hover {
-      background: #152250;
-      box-shadow: 0 4px 16px rgba(27,43,94,0.3);
-    }
-
-    .btn--outline {
-      background: transparent;
-      color: var(--primary);
-      border-color: var(--primary);
-    }
-
-    .btn--outline:hover {
-      background: var(--primary);
-      color: var(--white);
-    }
-
-    /* Arrows inside buttons */
-    .btn__arrow {
-      font-size: 1rem;
-      transition: transform 0.15s;
-    }
-    .btn:hover .btn__arrow { transform: translateX(3px); }
-
-    /* ── ADSENSE PLACEHOLDER ─────────────────────────────────── */
-    #ad-hero {
-      background: #f0ede8;
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 90px;
-      margin: 32px 0 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    /* ── TRENDING PILLS ──────────────────────────────────────── */
-    .trending {
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border);
-      background: var(--white);
-    }
-
-    .trending__inner {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .trending__label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .trending__pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--primary);
-      background: rgba(27,43,94,0.06);
-      border: 1px solid rgba(27,43,94,0.14);
-      padding: 5px 14px;
-      border-radius: 99px;
-      transition: background 0.15s, border-color 0.15s, color 0.15s;
-      cursor: pointer;
-    }
-
-    .pill:hover {
-      background: var(--primary);
-      color: var(--white);
-      border-color: var(--primary);
-    }
-
-    /* ── ARTICLE GRID ────────────────────────────────────────── */
-    .articles {
-      padding: 64px 0 72px;
-    }
-
-    .articles__header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 36px;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .section-title {
-      font-family: var(--font-head);
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: var(--primary);
-      letter-spacing: -0.02em;
-    }
-
-    .section-link {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      transition: gap 0.15s;
-    }
-
-    .section-link:hover { gap: 8px; }
-
-    .articles__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    /* ── CARD ────────────────────────────────────────────────── */
-    .card {
-      display: flex;
-      flex-direction: column;
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-      border-left: 4px solid var(--accent);
-      border-color: var(--accent);
-    }
-
-    .card__bar {
-      height: 4px;
-      width: 100%;
-      flex-shrink: 0;
-    }
-
-    .card__bar--primary { background: var(--primary); }
-    .card__bar--accent  { background: var(--accent); }
-
-    .card__body {
-      padding: 22px 22px 24px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .card__meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 14px;
-    }
-
-    .tag {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 4px;
-    }
-
-    .tag--tax      { color: #1B2B5E; background: rgba(27,43,94,0.08); }
-    .tag--banking  { color: #1a6b4a; background: rgba(26,107,74,0.08); }
-    .tag--invest   { color: #7a3800; background: rgba(122,56,0,0.08); }
-    .tag--property { color: #6b1a1a; background: rgba(107,26,26,0.08); }
-
-    .read-time {
-      font-size: 0.75rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .read-time::before {
-      content: '';
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
-      background-size: contain;
-      background-repeat: no-repeat;
-      opacity: 0.7;
-    }
-
-    .card__title {
-      font-family: var(--font-head);
-      font-size: 1.05rem;
-      line-height: 1.35;
-      color: var(--text);
-      flex: 1;
-      transition: color 0.15s;
-    }
-
-    .card:hover .card__title { color: var(--primary); }
-
-    .card__footer {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--accent);
-      transition: gap 0.15s;
-    }
-
-    .card:hover .card__footer { gap: 10px; }
-
-    .card__footer::after {
-      content: '→';
-    }
-
-    /* ── TRUST STRIP ─────────────────────────────────────────── */
-    .trust {
-      background: var(--primary);
-      padding: 20px 0;
-    }
-
-    .trust__inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0;
-    }
-
-    .trust__items {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0;
-    }
-
-    .trust__item {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.85);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 20px;
-      position: relative;
-    }
-
-    .trust__item::before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .trust__item:first-child::before { display: none; }
-    .trust__item:first-child { padding-left: 0; }
-
-    /* ── FOOTER ──────────────────────────────────────────────── */
-    .footer {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      padding: 28px 0;
-    }
-
-    .footer__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .footer__left {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .footer__copy {
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .footer__links {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .footer__links a {
-      font-size: 0.82rem;
-      color: var(--muted);
-      transition: color 0.15s;
-    }
-
-    .footer__links a:hover { color: var(--primary); }
-
-    .footer__domain {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: -0.01em;
-    }
-
-    /* ── RESPONSIVE ──────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .articles__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 767px) {
-      .nav__links { display: none; }
-      .nav__hamburger { display: flex; }
-
-      .hero { padding: 48px 0 44px; }
-      .hero__h1 { font-size: 1.85rem; }
-      .hero__sub { font-size: 1rem; }
-
-      .articles__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .articles { padding: 44px 0 52px; }
-
-      .footer__inner { flex-direction: column; align-items: flex-start; }
-      .footer__left  { flex-direction: column; align-items: flex-start; gap: 10px; }
-
-      .trust__item { padding: 3px 12px; font-size: 0.78rem; }
-
-      #ad-hero { height: 70px; }
-    }
-
-    @media (max-width: 480px) {
-      .hero__ctas { flex-direction: column; }
-      .btn { justify-content: center; }
-
-      .trending__inner { gap: 8px; }
-    }
+    .nav__mobile a { font-size: 0.95rem; font-weight: 500; color: var(--text); padding: 10px 24px; }
+
+    /* ALERT STRIP */
+    .alert-strip { background: #6b1010; padding: 10px 0; }
+    .alert-strip__inner { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; text-align: center; }
+    .alert-strip__badge { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; background: #a91b1b; color: #fff; padding: 3px 9px; border-radius: 4px; white-space: nowrap; display: flex; align-items: center; gap: 5px; }
+    .pulse-dot { width: 5px; height: 5px; border-radius: 50%; background: #ff6b6b; animation: blink 1.5s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .alert-strip__text { font-size: 0.84rem; color: rgba(255,255,255,0.88); }
+    .alert-strip__text strong { color: #fff; }
+    .alert-strip a { font-size: 0.82rem; font-weight: 700; color: #ffd166; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
+    .alert-strip a:hover { color: #fff; }
+
+    /* HERO */
+    .hero { background: var(--surface); border-bottom: 1px solid var(--border); padding: 60px 0 52px; position: relative; overflow: hidden; }
+    .hero::before { content:''; position:absolute; top:-80px; right:-100px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle,rgba(201,150,42,0.07) 0%,transparent 70%); pointer-events:none; }
+    .hero::after  { content:''; position:absolute; bottom:-120px; left:-60px; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle,rgba(27,43,94,0.05) 0%,transparent 70%); pointer-events:none; }
+    .hero__inner { position:relative; z-index:1; }
+    .hero__badge { display:inline-flex; align-items:center; gap:6px; font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent); background:rgba(201,150,42,0.1); border:1px solid rgba(201,150,42,0.25); padding:4px 12px; border-radius:99px; margin-bottom:18px; }
+    .hero__badge::before { content:''; display:block; width:6px; height:6px; border-radius:50%; background:var(--accent); animation:pulse 1.8s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
+    .hero__h1 { font-family:var(--font-head); font-size:clamp(1.9rem,4vw,3.1rem); line-height:1.15; color:var(--primary); letter-spacing:-0.02em; margin-bottom:14px; max-width:780px; }
+    .hero__sub { font-size:1.04rem; color:var(--muted); line-height:1.65; margin-bottom:24px; max-width:600px; }
+
+    /* Hero Budget quick cards */
+    .hero__budget-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:26px; }
+    .bcard { background:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:14px 16px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:5px; transition:transform 0.15s,box-shadow 0.15s,border-color 0.15s; }
+    .bcard:hover { transform:translateY(-2px); box-shadow:var(--shadow-md); border-color:var(--accent); }
+    .bcard__label { font-size:0.67rem; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--accent); }
+    .bcard__label.red { color:#a91b1b; }
+    .bcard__title { font-family:var(--font-head); font-size:0.93rem; color:var(--primary); line-height:1.3; }
+    .bcard__sub { font-size:0.76rem; color:var(--muted); line-height:1.4; }
+    .bcard__cta { font-size:0.74rem; font-weight:700; color:var(--accent); margin-top:3px; display:flex; align-items:center; gap:3px; transition:gap 0.15s; }
+    .bcard:hover .bcard__cta { gap:7px; }
+
+    .hero__ctas { display:flex; flex-wrap:wrap; gap:12px; }
+    .btn { display:inline-flex; align-items:center; gap:8px; font-family:var(--font-body); font-size:0.9rem; font-weight:600; padding:12px 22px; border-radius:8px; cursor:pointer; transition:transform 0.15s,box-shadow 0.15s,background 0.15s; border:2px solid transparent; white-space:nowrap; }
+    .btn:hover { transform:translateY(-1px); }
+    .btn--primary  { background:var(--primary); color:var(--white); box-shadow:0 2px 8px rgba(27,43,94,0.25); }
+    .btn--primary:hover  { background:#152250; }
+    .btn--outline  { background:transparent; color:var(--primary); border-color:var(--primary); }
+    .btn--outline:hover  { background:var(--primary); color:var(--white); }
+    .btn--accent   { background:var(--accent); color:var(--white); box-shadow:0 2px 8px rgba(201,150,42,0.3); }
+    .btn--accent:hover   { background:#b5841f; }
+    .btn--urgent   { background:#6b1010; color:var(--white); box-shadow:0 2px 8px rgba(107,16,16,0.3); }
+    .btn--urgent:hover   { background:#4e0c0c; }
+    .btn__arr { transition:transform 0.15s; }
+    .btn:hover .btn__arr { transform:translateX(3px); }
+    #ad-hero { background:#f0ede8; border:1px dashed var(--border); border-radius:var(--radius); display:flex; align-items:center; justify-content:center; height:90px; margin:26px 0 0; color:var(--muted); font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; }
+
+    /* TRENDING */
+    .trending { padding:18px 0; border-bottom:1px solid var(--border); background:var(--white); }
+    .trending__inner { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+    .trending__label { font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); white-space:nowrap; flex-shrink:0; }
+    .trending__pills { display:flex; flex-wrap:wrap; gap:8px; }
+    .pill { display:inline-flex; align-items:center; gap:5px; font-size:0.82rem; font-weight:500; color:var(--primary); background:rgba(27,43,94,0.06); border:1px solid rgba(27,43,94,0.14); padding:5px 14px; border-radius:99px; transition:background 0.15s,color 0.15s; }
+    .pill:hover { background:var(--primary); color:var(--white); }
+    .pill--hot { color:#6b1010; background:rgba(107,16,16,0.07); border-color:rgba(107,16,16,0.22); }
+    .pill--hot:hover { background:#6b1010; color:var(--white); }
+    .pill__dot { width:5px; height:5px; border-radius:50%; background:#c0392b; flex-shrink:0; animation:blink 1.5s infinite; }
+
+    /* BUDGET 2026 FEATURE SECTION */
+    .budget-section { background:linear-gradient(135deg,#1a0505 0%,#3d0f0f 100%); padding:44px 0 40px; }
+    .budget-section__eyebrow { font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#ffd166; margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+    .budget-section__eyebrow::before { content:''; display:block; width:20px; height:2px; background:#ffd166; border-radius:2px; }
+    .budget-section h2 { font-family:var(--font-head); font-size:clamp(1.5rem,3vw,2.1rem); color:var(--white); letter-spacing:-0.02em; margin-bottom:8px; line-height:1.25; }
+    .budget-section__sub { font-size:0.9rem; color:rgba(255,255,255,0.62); margin-bottom:28px; max-width:580px; }
+    .budget-section__grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+    .bfcard { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:20px 22px; transition:background 0.15s,border-color 0.15s,transform 0.15s; display:flex; flex-direction:column; gap:8px; }
+    .bfcard:hover { background:rgba(255,255,255,0.09); border-color:rgba(255,209,102,0.4); transform:translateY(-2px); }
+    .bfcard__tag { font-size:0.67rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#ffd166; display:flex; align-items:center; gap:5px; }
+    .live-dot { width:5px; height:5px; border-radius:50%; background:#2ecc71; animation:blink 1.5s infinite; }
+    .soon-dot { width:5px; height:5px; border-radius:50%; background:#ffd166; }
+    .bfcard h3 { font-family:var(--font-head); font-size:1.03rem; color:var(--white); line-height:1.3; }
+    .bfcard p { font-size:0.82rem; color:rgba(255,255,255,0.62); line-height:1.55; }
+    .bfcard__link { font-size:0.78rem; font-weight:700; color:#ffd166; display:flex; align-items:center; gap:4px; margin-top:4px; transition:gap 0.15s; }
+    .bfcard:hover .bfcard__link { gap:8px; }
+    .budget-section__cta { margin-top:24px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn--gold { background:#ffd166; color:#1a0505; font-weight:700; box-shadow:0 2px 8px rgba(255,209,102,0.3); }
+    .btn--gold:hover { background:#f5c842; }
+    .btn--ghost { background:transparent; color:rgba(255,255,255,0.8); border:1.5px solid rgba(255,255,255,0.3); }
+    .btn--ghost:hover { background:rgba(255,255,255,0.1); color:var(--white); }
+
+    /* TOOL STRIP */
+    .tool-strip { background:linear-gradient(135deg,var(--primary) 0%,#253e80 100%); padding:26px 0; }
+    .tool-strip__inner { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .tool-strip__text h3 { font-family:var(--font-head); font-size:1.2rem; color:var(--white); margin-bottom:4px; }
+    .tool-strip__text p { font-size:0.85rem; color:rgba(255,255,255,0.7); }
+
+    /* ARTICLES */
+    .articles { padding:60px 0 68px; }
+    .articles__header { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:30px; gap:16px; flex-wrap:wrap; }
+    .section-title { font-family:var(--font-head); font-size:clamp(1.4rem,3vw,1.9rem); color:var(--primary); letter-spacing:-0.02em; }
+    .section-link { font-size:0.875rem; font-weight:600; color:var(--accent); display:flex; align-items:center; gap:4px; transition:gap 0.15s; }
+    .section-link:hover { gap:8px; }
+    .articles__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .articles__grid--4 { grid-template-columns:repeat(4,1fr); margin-top:20px; }
+
+    /* CARD */
+    .card { display:flex; flex-direction:column; background:var(--white); border-radius:var(--radius); border:1px solid var(--border); overflow:hidden; box-shadow:var(--shadow-sm); transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s; }
+    .card:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:var(--accent); }
+    .card--urgent { border-top:3px solid #a91b1b; }
+    .card__bar { height:4px; width:100%; flex-shrink:0; }
+    .card__bar--primary { background:var(--primary); }
+    .card__bar--accent  { background:var(--accent); }
+    .card__bar--urgent  { background:#a91b1b; }
+    .card__body { padding:20px 20px 22px; display:flex; flex-direction:column; flex:1; }
+    .card__meta { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+    .tag { font-size:0.69rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; padding:3px 9px; border-radius:4px; }
+    .tag--tax      { color:#1B2B5E; background:rgba(27,43,94,0.08); }
+    .tag--banking  { color:#1a6b4a; background:rgba(26,107,74,0.08); }
+    .tag--invest   { color:#7a3800; background:rgba(122,56,0,0.08); }
+    .tag--property { color:#6b1a1a; background:rgba(107,26,26,0.08); }
+    .tag--budget   { color:#4a1a6b; background:rgba(74,26,107,0.08); }
+    .tag--urgent   { color:#6b1010; background:rgba(107,16,16,0.1); }
+    .tag--tool     { color:var(--primary); background:rgba(27,43,94,0.08); }
+    .card__new { font-size:0.62rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; background:#a91b1b; color:#fff; padding:2px 7px; border-radius:3px; }
+    .read-time { font-size:0.73rem; color:var(--muted); }
+    .card__title { font-family:var(--font-head); font-size:1rem; line-height:1.35; color:var(--text); flex:1; transition:color 0.15s; }
+    .card:hover .card__title { color:var(--primary); }
+    .card__footer { margin-top:14px; padding-top:12px; border-top:1px solid var(--border); font-size:0.78rem; font-weight:600; color:var(--accent); display:flex; align-items:center; gap:5px; transition:gap 0.15s; }
+    .card:hover .card__footer { gap:9px; }
+    .card__footer::after { content:'→'; }
+
+    /* TRUST */
+    .trust { background:var(--primary); padding:18px 0; }
+    .trust__items { display:flex; align-items:center; flex-wrap:wrap; justify-content:center; }
+    .trust__item { font-size:0.8rem; font-weight:500; color:rgba(255,255,255,0.82); display:flex; align-items:center; gap:7px; padding:4px 18px; }
+    .trust__item::before { content:''; display:block; width:5px; height:5px; border-radius:50%; background:var(--accent); flex-shrink:0; }
+    .trust__item:first-child::before { display:none; }
+    .trust__item:first-child { padding-left:0; }
+
+    /* FOOTER */
+    .footer { background:var(--white); border-top:1px solid var(--border); padding:28px 0; }
+    .footer__inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
+    .footer__left { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+    .footer__copy { font-size:0.82rem; color:var(--muted); }
+    .footer__links { display:flex; gap:16px; }
+    .footer__links a { font-size:0.82rem; color:var(--muted); transition:color 0.15s; }
+    .footer__links a:hover { color:var(--primary); }
+    .footer__domain { font-size:0.82rem; font-weight:600; color:var(--accent); }
+
+    /* RESPONSIVE */
+    @media (max-width:1024px) { .articles__grid--4 { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:900px)  { .articles__grid { grid-template-columns:repeat(2,1fr); } .hero__budget-cards { grid-template-columns:1fr 1fr; } .budget-section__grid { grid-template-columns:1fr; } }
+    @media (max-width:767px)  { .nav__links{display:none;} .nav__hamburger{display:flex;} .hero{padding:44px 0 38px;} .hero__budget-cards{grid-template-columns:1fr;} .articles__grid,.articles__grid--4{grid-template-columns:1fr;} .articles{padding:40px 0 48px;} .footer__inner{flex-direction:column;align-items:flex-start;} .footer__left{flex-direction:column;gap:10px;} .trust__item{padding:3px 10px;font-size:0.76rem;} .tool-strip__inner{flex-direction:column;align-items:flex-start;} .alert-strip__inner{flex-direction:column;gap:8px;} .budget-section__cta{flex-direction:column;} }
+    @media (max-width:480px)  { .hero__ctas{flex-direction:column;} .btn{justify-content:center;} }
   </style>
 </head>
 <body>
 
-  <!-- ══════════════ NAV ══════════════ -->
-  <header class="nav">
-    <div class="container">
-      <div class="nav__inner">
-        <a href="/" class="nav__logo">NRI Money<span> Guide</span></a>
-
-        <nav class="nav__links" aria-label="Primary navigation">
-          <a href="#">Tax</a>
-          <a href="#">Invest</a>
-          <a href="#">Banking</a>
-          <a href="#">Tools</a>
-        </nav>
-
-        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
-      <!-- Mobile nav -->
-      <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
-        <a href="#">Tax</a>
-        <a href="#">Invest</a>
-        <a href="#">Banking</a>
-        <a href="#">Tools</a>
+<!-- NAV -->
+<header class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">NRI Money<span> Guide</span></a>
+      <nav class="nav__links">
+        <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+        <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+        <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+        <a href="tools/nri-tax-estimator.html" class="nav__tool-link">🧮 Tax Estimator</a>
       </nav>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+    <nav class="nav__mobile" id="mobileNav">
+      <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+      <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+      <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+      <a href="tools/nri-tax-estimator.html">🧮 NRI Tax Estimator</a>
+    </nav>
+  </div>
+</header>
 
+<!-- POSITION 1 — Alert strip: first thing every visitor sees -->
+<div class="alert-strip" role="alert" aria-label="Budget 2026 alert">
+  <div class="alert-strip__inner">
+    <span class="alert-strip__badge"><span class="pulse-dot"></span>Live April 1</span>
+    <span class="alert-strip__text"><strong>Budget 2026:</strong> New Income Tax Act live. FAST-DS amnesty window opens. PIS limits doubled to 10%.</span>
+    <a href="articles/budget-2026-nri-changes.html">All changes →</a>
+  </div>
+</div>
 
-  <!-- ══════════════ HERO ══════════════ -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero__inner">
-        <div class="hero__badge">Budget 2025 Updated</div>
+<!-- POSITION 2 — Hero: Budget 2026 as the lead story with 3 quick-access cards -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__badge">Budget 2026 · New Income Tax Act · FY 2026-27</div>
+      <h1 class="hero__h1">India's tax rules changed on April 1.<br>Here's what every NRI must do now.</h1>
+      <p class="hero__sub">The new Income Tax Act 2025 is live. The FAST-DS amnesty window for unreported foreign assets opens within weeks. PIS investment limits are doubled. Three things to act on before June.</p>
 
-        <h1 class="hero__h1">Finally understand your NRI tax and investments</h1>
-
-        <p class="hero__sub">Budget 2025 changed the rules. Here's what it means for your money.</p>
-
-        <div class="hero__ctas">
-          <a href="#" class="btn btn--primary">
-            Read the tax guide
-            <span class="btn__arrow">→</span>
-          </a>
-          <a href="#" class="btn btn--outline">
-            NRE vs NRO explained
-            <span class="btn__arrow">→</span>
-          </a>
-        </div>
-
-        <!-- AdSense placeholder -->
-        <div id="ad-hero" role="complementary" aria-label="Advertisement">
-          Advertisement
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════ TRENDING PILLS ══════════════ -->
-  <section class="trending" aria-label="Most searched this week">
-    <div class="container">
-      <div class="trending__inner">
-        <span class="trending__label">🔍 Trending</span>
-        <div class="trending__pills">
-          <a href="#" class="pill">NRI ITR filing</a>
-          <a href="#" class="pill">NRE vs NRO</a>
-          <a href="#" class="pill">DTAA UAE</a>
-          <a href="#" class="pill">NRI mutual funds</a>
-          <a href="#" class="pill">Property sale tax</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════ ARTICLES ══════════════ -->
-  <main class="articles">
-    <div class="container">
-      <div class="articles__header">
-        <h2 class="section-title">Latest guides</h2>
-        <a href="#" class="section-link">View all articles <span>→</span></a>
+      <!-- Budget 2026 quick-access cards -->
+      <div class="hero__budget-cards">
+        <a href="articles/budget-2026-nri-changes.html" class="bcard">
+          <div class="bcard__label red">🔴 Live Now — April 1</div>
+          <div class="bcard__title">New Income Tax Act 2025 — what changes for NRIs</div>
+          <div class="bcard__sub">New ITR forms, penalty reforms, PIS limits. Tax rates unchanged.</div>
+          <div class="bcard__cta">Full guide →</div>
+        </a>
+        <a href="articles/budget-2026-fast-ds-foreign-assets.html" class="bcard">
+          <div class="bcard__label red">⏳ 6-Month Window Only</div>
+          <div class="bcard__title">FAST-DS 2026 — foreign asset amnesty for NRIs</div>
+          <div class="bcard__sub">Missed Schedule FA? ESOP undisclosed? ₹1L flat fee vs ₹10L/yr penalty.</div>
+          <div class="bcard__cta">Do you qualify? →</div>
+        </a>
+        <a href="articles/budget-2026-nri-changes.html#pis" class="bcard">
+          <div class="bcard__label">📈 FY 2026-27</div>
+          <div class="bcard__title">PIS limit raised: 5% → 10% per company</div>
+          <div class="bcard__sub">Own up to 10% of any listed Indian company. Aggregate NRI ceiling: 24%.</div>
+          <div class="bcard__cta">See details →</div>
+        </a>
       </div>
 
-      <div class="articles__grid">
-
-        <!-- Card 1 -->
-        <a href="#" class="card">
-          <div class="card__bar card__bar--primary"></div>
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="tag tag--tax">Tax</span>
-              <span class="read-time">8 min read</span>
-            </div>
-            <h3 class="card__title">NRI ITR Filing 2025-26: Complete Step-by-Step Guide</h3>
-            <div class="card__footer">Read guide</div>
-          </div>
-        </a>
-
-        <!-- Card 2 -->
-        <a href="#" class="card">
-          <div class="card__bar card__bar--accent"></div>
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="tag tag--banking">Banking</span>
-              <span class="read-time">6 min read</span>
-            </div>
-            <h3 class="card__title">NRE vs NRO vs FCNR: Which Account Do You Actually Need?</h3>
-            <div class="card__footer">Read guide</div>
-          </div>
-        </a>
-
-        <!-- Card 3 -->
-        <a href="#" class="card">
-          <div class="card__bar card__bar--primary"></div>
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="tag tag--invest">Invest</span>
-              <span class="read-time">7 min read</span>
-            </div>
-            <h3 class="card__title">NRI Mutual Fund Taxation — What Changed in Budget 2025</h3>
-            <div class="card__footer">Read guide</div>
-          </div>
-        </a>
-
-        <!-- Card 4 -->
-        <a href="#" class="card">
-          <div class="card__bar card__bar--accent"></div>
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="tag tag--tax">Tax</span>
-              <span class="read-time">5 min read</span>
-            </div>
-            <h3 class="card__title">DTAA India-UAE: How to Avoid Paying Tax Twice</h3>
-            <div class="card__footer">Read guide</div>
-          </div>
-        </a>
-
-        <!-- Card 5 -->
-        <a href="#" class="card">
-          <div class="card__bar card__bar--primary"></div>
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="tag tag--property">Property</span>
-              <span class="read-time">9 min read</span>
-            </div>
-            <h3 class="card__title">NRI Selling Property in India: TDS Rules and How to Get a Refund</h3>
-            <div class="card__footer">Read guide</div>
-          </div>
-        </a>
-
-        <!-- Card 6 -->
-        <a href="#" class="card">
-          <div class="card__bar card__bar--accent"></div>
-          <div class="card__body">
-            <div class="card__meta">
-              <span class="tag tag--invest">Invest</span>
-              <span class="read-time">6 min read</span>
-            </div>
-            <h3 class="card__title">Should NRIs Invest in Indian Stocks in 2025?</h3>
-            <div class="card__footer">Read guide</div>
-          </div>
-        </a>
-
-      </div><!-- /.articles__grid -->
+      <div class="hero__ctas">
+        <a href="articles/budget-2026-fast-ds-foreign-assets.html" class="btn btn--urgent">⚠️ FAST-DS amnesty guide <span class="btn__arr">→</span></a>
+        <a href="articles/budget-2026-nri-changes.html" class="btn btn--primary">All Budget 2026 changes <span class="btn__arr">→</span></a>
+        <a href="tools/nri-tax-estimator.html" class="btn btn--accent">🧮 Estimate my tax <span class="btn__arr">→</span></a>
+      </div>
+      <div id="ad-hero" role="complementary" aria-label="Advertisement">Advertisement</div>
     </div>
-  </main>
+  </div>
+</section>
 
-
-  <!-- ══════════════ TRUST STRIP ══════════════ -->
-  <section class="trust" aria-label="Site credentials">
-    <div class="container">
-      <div class="trust__inner">
-        <div class="trust__items">
-          <span class="trust__item">Updated for Budget 2025</span>
-          <span class="trust__item">For NRIs in UAE, US, UK, Canada, Singapore</span>
-          <span class="trust__item">Always free</span>
-        </div>
+<!-- POSITION 3 — Trending pills: Budget 2026 items lead -->
+<section class="trending">
+  <div class="container">
+    <div class="trending__inner">
+      <span class="trending__label">🔥 Trending</span>
+      <div class="trending__pills">
+        <a href="articles/budget-2026-nri-changes.html"          class="pill pill--hot"><span class="pill__dot"></span>Budget 2026 NRI changes</a>
+        <a href="articles/budget-2026-fast-ds-foreign-assets.html" class="pill pill--hot"><span class="pill__dot"></span>FAST-DS amnesty</a>
+        <a href="articles/nri-itr-filing-2025-26.html"           class="pill">NRI ITR 2025-26</a>
+        <a href="articles/nre-nro-fcnr-comparison.html"          class="pill">NRE vs NRO</a>
+        <a href="articles/dtaa-india-uae.html"                   class="pill">DTAA UAE</a>
+        <a href="articles/nri-selling-property.html"             class="pill">Property TDS</a>
+        <a href="articles/nri-mutual-fund-taxation.html"         class="pill">NRI mutual funds</a>
+        <a href="tools/nri-tax-estimator.html"                   class="pill">Tax calculator</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-
-  <!-- ══════════════ FOOTER ══════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__left">
-          <span class="footer__copy">© 2025 NRI Money Guide</span>
-          <nav class="footer__links" aria-label="Footer navigation">
-            <a href="#">Disclaimer</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Contact</a>
-          </nav>
-        </div>
-        <span class="footer__domain">nrimoneyguide.com</span>
-      </div>
+<!-- POSITION 4 — Budget 2026 dedicated dark feature section -->
+<section class="budget-section">
+  <div class="container">
+    <div class="budget-section__eyebrow">Budget 2026-27 · What goes live when</div>
+    <h2>Six changes NRIs must act on before June 2026</h2>
+    <p class="budget-section__sub">New Income Tax Act, doubled PIS limits, FAST-DS amnesty, TAN removal, LRS TCS cuts, and extended ITR deadlines — full breakdown with effective dates.</p>
+    <div class="budget-section__grid">
+      <a href="articles/budget-2026-nri-changes.html#new-it-act" class="bfcard">
+        <div class="bfcard__tag"><span class="live-dot"></span>Live April 1, 2026</div>
+        <h3>New Income Tax Act 2025 — same tax, cleaner law</h3>
+        <p>Replaces IT Act 1961. New ITR forms, modernised NRI rules, penalty reforms. Tax rates and slabs unchanged.</p>
+        <div class="bfcard__link">What changes →</div>
+      </a>
+      <a href="articles/budget-2026-fast-ds-foreign-assets.html" class="bfcard">
+        <div class="bfcard__tag"><span class="soon-dot"></span>Opens April–May 2026 · 6 months only</div>
+        <h3>FAST-DS 2026 — once-in-a-decade amnesty for unreported foreign assets</h3>
+        <p>Missed Schedule FA for an ESOP, RSU, or overseas account? Cat B: ₹1L flat fee + prosecution immunity. Cat A: 60% vs 120%+ under Black Money Act.</p>
+        <div class="bfcard__link">Full guide →</div>
+      </a>
+      <a href="articles/budget-2026-nri-changes.html#pis" class="bfcard">
+        <div class="bfcard__tag"><span class="live-dot"></span>Live FY 2026-27</div>
+        <h3>PIS individual limit: 5% → 10% per company</h3>
+        <p>NRIs can now own up to 10% of any listed Indian company. Aggregate NRI + OCI ceiling raised from 10% to 24%.</p>
+        <div class="bfcard__link">See PIS changes →</div>
+      </a>
+      <a href="articles/budget-2026-nri-changes.html#effective-dates" class="bfcard">
+        <div class="bfcard__tag"><span class="soon-dot"></span>October 2026</div>
+        <h3>TAN abolished for property TDS + LRS TCS cut to 2%</h3>
+        <p>Buyers use PAN challan instead of TAN. Education/medical TCS: 5% → 2%. Overseas tour TCS: flat 2%.</p>
+        <div class="bfcard__link">All effective dates →</div>
+      </a>
     </div>
-  </footer>
+    <div class="budget-section__cta">
+      <a href="articles/budget-2026-nri-changes.html"             class="btn btn--gold">Full Budget 2026 NRI guide <span class="btn__arr">→</span></a>
+      <a href="articles/budget-2026-fast-ds-foreign-assets.html"  class="btn btn--ghost">FAST-DS: do I qualify? <span class="btn__arr">→</span></a>
+    </div>
+  </div>
+</section>
 
+<!-- TOOL STRIP -->
+<div class="tool-strip">
+  <div class="container">
+    <div class="tool-strip__inner">
+      <div class="tool-strip__text">
+        <h3>NRI Income Tax Estimator — Updated for Budget 2026</h3>
+        <p>Enter NRO interest, rental income, and capital gains. Instant breakdown using the new Act 2025 rules.</p>
+      </div>
+      <a href="tools/nri-tax-estimator.html" class="btn btn--accent">Try free tool <span class="btn__arr">→</span></a>
+    </div>
+  </div>
+</div>
 
-  <script>
-    // Hamburger toggle — no frameworks
-    const hamburger  = document.getElementById('hamburger');
-    const mobileNav  = document.getElementById('mobileNav');
+<!-- POSITION 5 — Article grid: Budget 2026 articles lead the top row -->
+<main class="articles">
+  <div class="container">
 
-    hamburger.addEventListener('click', function () {
-      const isOpen = mobileNav.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
-    });
+    <!-- Row 1: Budget 2026 + core tax guides -->
+    <div class="articles__header">
+      <h2 class="section-title">Budget 2026 — act now</h2>
+      <a href="articles/budget-2026-nri-changes.html" class="section-link">All Budget 2026 guides →</a>
+    </div>
+    <div class="articles__grid">
+      <a href="articles/budget-2026-nri-changes.html" class="card card--urgent">
+        <div class="card__bar card__bar--urgent"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--urgent">Budget 2026</span><span class="card__new">NEW</span></div>
+          <h3 class="card__title">Budget 2026: Every NRI Change — What Goes Live on April 1</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/budget-2026-fast-ds-foreign-assets.html" class="card card--urgent">
+        <div class="card__bar card__bar--urgent"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--urgent">Budget 2026</span><span class="card__new">NEW</span></div>
+          <h3 class="card__title">FAST-DS 2026: NRI Foreign Asset Disclosure — Do You Need to Act?</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/nri-itr-filing-2025-26.html" class="card">
+        <div class="card__bar card__bar--primary"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--tax">Tax</span><span class="read-time">8 min</span></div>
+          <h3 class="card__title">NRI ITR Filing 2025-26: Complete Step-by-Step Guide</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+    </div>
 
-    // Close mobile nav on link click
-    mobileNav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobileNav.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
+    <!-- Row 2: Essential guides -->
+    <div class="articles__header" style="margin-top:44px;">
+      <h2 class="section-title">Essential guides</h2>
+      <a href="articles/nri-itr-filing-2025-26.html" class="section-link">All tax guides →</a>
+    </div>
+    <div class="articles__grid">
+      <a href="articles/nre-nro-fcnr-comparison.html" class="card">
+        <div class="card__bar card__bar--accent"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--banking">Banking</span><span class="read-time">7 min</span></div>
+          <h3 class="card__title">NRE vs NRO vs FCNR: Which Account Do You Actually Need?</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/nri-mutual-fund-taxation.html" class="card">
+        <div class="card__bar card__bar--primary"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--invest">Invest</span><span class="read-time">7 min</span></div>
+          <h3 class="card__title">NRI Mutual Fund Taxation — Complete 2025-26 Guide</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/dtaa-india-uae.html" class="card">
+        <div class="card__bar card__bar--accent"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--tax">Tax</span><span class="read-time">6 min</span></div>
+          <h3 class="card__title">DTAA India-UAE: How to Avoid Paying Tax Twice</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/nri-selling-property.html" class="card">
+        <div class="card__bar card__bar--primary"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--property">Property</span><span class="read-time">9 min</span></div>
+          <h3 class="card__title">NRI Selling Property in India: TDS Rules and How to Get a Refund</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/budget-2025-nri-changes.html" class="card">
+        <div class="card__bar card__bar--accent"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--budget">Budget 2025</span><span class="read-time">6 min</span></div>
+          <h3 class="card__title">Budget 2025: Key Changes That Affected NRIs — Retrospective</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/nri-invest-indian-stocks.html" class="card">
+        <div class="card__bar card__bar--primary"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--invest">Invest</span><span class="read-time">6 min</span></div>
+          <h3 class="card__title">Should NRIs Invest in Indian Stocks in 2026? PIS Account Explained</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+    </div>
 
+    <!-- Row 3: More guides -->
+    <div class="articles__header" style="margin-top:44px;">
+      <h2 class="section-title">More guides</h2>
+    </div>
+    <div class="articles__grid articles__grid--4">
+      <a href="articles/nre-fixed-deposit.html" class="card">
+        <div class="card__bar card__bar--primary"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--banking">Banking</span><span class="read-time">5 min</span></div>
+          <h3 class="card__title">How to Open an NRE Fixed Deposit from Abroad</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/nri-home-loan.html" class="card">
+        <div class="card__bar card__bar--accent"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--property">Property</span><span class="read-time">7 min</span></div>
+          <h3 class="card__title">NRI Home Loan: Eligibility, Rates, and the Full Process</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="articles/nri-ppf-rules.html" class="card">
+        <div class="card__bar card__bar--primary"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--invest">Invest</span><span class="read-time">5 min</span></div>
+          <h3 class="card__title">NRI PPF Rules: What Contributions Are Still Allowed?</h3>
+          <div class="card__footer">Read guide</div>
+        </div>
+      </a>
+      <a href="tools/nri-tax-estimator.html" class="card">
+        <div class="card__bar card__bar--accent"></div>
+        <div class="card__body">
+          <div class="card__meta"><span class="tag tag--tool">Tool</span><span class="read-time">2 min</span></div>
+          <h3 class="card__title">Free NRI Tax Estimator — FY 2025-26 (Updated for Budget 2026)</h3>
+          <div class="card__footer">Use tool</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- TRUST STRIP -->
+<section class="trust">
+  <div class="container">
+    <div class="trust__items">
+      <span class="trust__item">Updated for Budget 2026 · New Income Tax Act April 1</span>
+      <span class="trust__item">For NRIs in UAE, US, UK, Canada, Singapore</span>
+      <span class="trust__item">Free NRI Tax Estimator</span>
+      <span class="trust__item">Always free</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <span class="footer__copy">© 2026 NRI Money Guide</span>
+        <nav class="footer__links">
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <span class="footer__domain">nrimoneyguide.com</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', function() {
+    const open = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+</script>
 </body>
 </html>

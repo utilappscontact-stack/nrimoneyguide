@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | NRI Money Guide</title>
+  <meta name="description" content="NRI Money Guide privacy policy. Learn how we collect, use, and protect your information when you visit nrimoneyguide.com." />
+  <link rel="canonical" href="https://nrimoneyguide.com/privacy/" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1B2B5E; --accent: #C9962A; --surface: #FAFAF8;
+      --text: #1A1A1A; --muted: #666666; --border: #E0DDD5; --white: #ffffff;
+      --font-head: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06); --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--text); background: var(--surface); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .nav__inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav__logo { font-family: var(--font-head); font-size: 1.3rem; color: var(--primary); }
+    .nav__logo span { color: var(--accent); }
+    .nav__links { display: flex; align-items: center; gap: 2px; }
+    .nav__links a { font-size: 0.875rem; font-weight: 500; color: var(--text); padding: 6px 14px; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+    .nav__links a:hover { background: var(--surface); color: var(--primary); }
+    .nav__tool-link { font-size: 0.8rem !important; font-weight: 600 !important; color: var(--accent) !important; border: 1.5px solid var(--accent); padding: 5px 12px !important; border-radius: 6px; margin-left: 6px; }
+    .nav__tool-link:hover { background: var(--accent); color: var(--white) !important; }
+    .nav__hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; border: none; background: none; padding: 4px; }
+    .nav__hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__mobile { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 12px 0 16px; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 0.95rem; font-weight: 500; color: var(--text); padding: 10px 24px; }
+    .page-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 48px 0 40px; }
+    .page-header__inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .page-header__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; display: block; }
+    .page-header h1 { font-family: var(--font-head); font-size: clamp(1.9rem, 3.5vw, 2.8rem); color: var(--primary); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .page-header__meta { font-size: 0.82rem; color: var(--muted); }
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+    .content h2 { font-family: var(--font-head); font-size: 1.35rem; color: var(--primary); letter-spacing: -0.01em; margin: 2em 0 0.7em; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 0.97rem; color: var(--text); line-height: 1.8; margin-bottom: 1.2em; }
+    .content ul { padding-left: 1.4em; margin-bottom: 1.2em; }
+    .content li { font-size: 0.97rem; line-height: 1.7; margin-bottom: 0.45em; }
+    .content strong { color: var(--primary); font-weight: 600; }
+    .content a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    .toc-box { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 36px; }
+    .toc-box__title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .toc-box ul { list-style: none; padding: 0; margin: 0; }
+    .toc-box li { margin-bottom: 6px; }
+    .toc-box a { font-size: 0.85rem; color: var(--muted); transition: color 0.15s; }
+    .toc-box a:hover { color: var(--primary); text-decoration: none; }
+    .footer { background: var(--white); border-top: 1px solid var(--border); padding: 28px 0; }
+    .footer__inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer__left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .footer__copy { font-size: 0.82rem; color: var(--muted); }
+    .footer__links { display: flex; gap: 16px; }
+    .footer__links a { font-size: 0.82rem; color: var(--muted); transition: color 0.15s; }
+    .footer__links a:hover { color: var(--primary); }
+    .footer__links a.active { color: var(--primary); font-weight: 600; }
+    .footer__domain { font-size: 0.82rem; font-weight: 600; color: var(--accent); }
+    @media (max-width: 767px) { .nav__links { display: none; } .nav__hamburger { display: flex; } .footer__inner { flex-direction: column; align-items: flex-start; } .footer__left { flex-direction: column; gap: 10px; } }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">NRI Money<span> Guide</span></a>
+    <nav class="nav__links">
+      <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+      <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+      <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+      <a href="tools/nri-tax-estimator.html" class="nav__tool-link">🧮 Tax Estimator</a>
+    </nav>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="mobileNav">
+    <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+    <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+    <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+    <a href="tools/nri-tax-estimator.html">🧮 NRI Tax Estimator</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <span class="page-header__label">Legal</span>
+    <h1>Privacy Policy</h1>
+    <p class="page-header__meta">Last updated: March 2026 &nbsp;·&nbsp; Effective: March 2026</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content">
+
+    <div class="toc-box">
+      <div class="toc-box__title">Contents</div>
+      <ul>
+        <li><a href="#what-we-collect">1. Information we collect</a></li>
+        <li><a href="#how-we-use">2. How we use information</a></li>
+        <li><a href="#cookies">3. Cookies and tracking</a></li>
+        <li><a href="#adsense">4. Google AdSense and advertising</a></li>
+        <li><a href="#third-party">5. Third-party links</a></li>
+        <li><a href="#data-retention">6. Data retention</a></li>
+        <li><a href="#your-rights">7. Your rights</a></li>
+        <li><a href="#children">8. Children's privacy</a></li>
+        <li><a href="#changes">9. Changes to this policy</a></li>
+        <li><a href="#contact-privacy">10. Contact</a></li>
+      </ul>
+    </div>
+
+    <p>NRI Money Guide ("we", "us", "our") operates nrimoneyguide.com. This Privacy Policy explains how we collect, use, and share information about visitors to our site. By using this site, you agree to the practices described here.</p>
+
+    <h2 id="what-we-collect">1. Information We Collect</h2>
+    <p>We collect two types of information:</p>
+    <p><strong>Automatically collected information:</strong> When you visit our site, our hosting provider and analytics tools may automatically record your IP address, browser type, operating system, referring URL, pages visited, and time spent on each page. This information is collected in aggregate and is not linked to a personally identifiable profile.</p>
+    <p><strong>Information you provide:</strong> If you contact us via the contact form or email, we collect the name and email address you provide, along with the content of your message. We do not require registration or account creation to use this site.</p>
+
+    <h2 id="how-we-use">2. How We Use Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Understand how visitors use our site so we can improve content and navigation</li>
+      <li>Respond to enquiries submitted through our contact form</li>
+      <li>Monitor for security threats or abuse</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+    <p>We do not sell, rent, or trade your personal information to any third party for their marketing purposes.</p>
+
+    <h2 id="cookies">3. Cookies and Tracking Technologies</h2>
+    <p>Our site uses cookies — small text files stored in your browser — and similar tracking technologies. We use these for:</p>
+    <ul>
+      <li><strong>Analytics:</strong> We use Google Analytics (or similar) to understand visitor behaviour in aggregate. This uses cookies to track sessions and pageviews. The data is anonymised before we see it.</li>
+      <li><strong>Advertising:</strong> Google AdSense places cookies to serve relevant advertisements. These cookies may track your browsing activity across sites to show you personalised ads.</li>
+      <li><strong>Functionality:</strong> Some cookies are strictly necessary for the site to function (e.g., remembering your preference if you dismiss a notice).</li>
+    </ul>
+    <p>You can control or disable cookies through your browser settings. Note that disabling certain cookies may affect your experience on this site.</p>
+
+    <h2 id="adsense">4. Google AdSense and Advertising</h2>
+    <p>This site participates in the Google AdSense programme. Google uses cookies, including the DoubleClick cookie, to serve ads based on your visits to this and other websites. You may opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google's Ad Settings</a> or by visiting <a href="https://optout.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>.</p>
+    <p>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visit to this and/or other sites. For more information, see Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+
+    <h2 id="third-party">5. Third-Party Links</h2>
+    <p>Our site contains links to external websites including banks, financial institutions, and government portals. Once you leave our site, your activity is governed by that website's own privacy policy. We are not responsible for the privacy practices of any third-party site.</p>
+
+    <h2 id="data-retention">6. Data Retention</h2>
+    <p>Analytics data is retained for 26 months and then automatically deleted. Contact form submissions are retained for as long as necessary to respond to your enquiry and for a reasonable period thereafter, unless you ask us to delete them sooner.</p>
+
+    <h2 id="your-rights">7. Your Rights</h2>
+    <p>Depending on your location, you may have the right to:</p>
+    <ul>
+      <li>Request access to the personal data we hold about you</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your data</li>
+      <li>Object to or restrict certain processing of your data</li>
+      <li>Lodge a complaint with a supervisory authority</li>
+    </ul>
+    <p>To exercise any of these rights, please <a href="contact.html">contact us</a>. We will respond within 30 days.</p>
+
+    <h2 id="children">8. Children's Privacy</h2>
+    <p>This site is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
+
+    <h2 id="changes">9. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this page periodically.</p>
+
+    <h2 id="contact-privacy">10. Contact</h2>
+    <p>If you have any questions about this Privacy Policy or how your information is handled, please <a href="contact.html">contact us</a>.</p>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <span class="footer__copy">© 2026 NRI Money Guide</span>
+      <nav class="footer__links">
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacy.html" class="active">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <span class="footer__domain">nrimoneyguide.com</span>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', function () {
+    const open = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>

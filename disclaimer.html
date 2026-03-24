@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclaimer | NRI Money Guide</title>
+  <meta name="description" content="Read the NRI Money Guide disclaimer. Our content is for informational purposes only and does not constitute tax, legal, or financial advice." />
+  <link rel="canonical" href="https://nrimoneyguide.com/disclaimer/" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1B2B5E; --accent: #C9962A; --surface: #FAFAF8;
+      --text: #1A1A1A; --muted: #666666; --border: #E0DDD5; --white: #ffffff;
+      --font-head: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06); --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--text); background: var(--surface); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .nav__inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav__logo { font-family: var(--font-head); font-size: 1.3rem; color: var(--primary); }
+    .nav__logo span { color: var(--accent); }
+    .nav__links { display: flex; align-items: center; gap: 2px; }
+    .nav__links a { font-size: 0.875rem; font-weight: 500; color: var(--text); padding: 6px 14px; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+    .nav__links a:hover { background: var(--surface); color: var(--primary); }
+    .nav__tool-link { font-size: 0.8rem !important; font-weight: 600 !important; color: var(--accent) !important; border: 1.5px solid var(--accent); padding: 5px 12px !important; border-radius: 6px; margin-left: 6px; transition: background 0.15s, color 0.15s !important; }
+    .nav__tool-link:hover { background: var(--accent); color: var(--white) !important; }
+    .nav__hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; border: none; background: none; padding: 4px; }
+    .nav__hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__mobile { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 12px 0 16px; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 0.95rem; font-weight: 500; color: var(--text); padding: 10px 24px; }
+
+    /* PAGE HEADER */
+    .page-header { background: var(--white); border-bottom: 1px solid var(--border); padding: 48px 0 40px; }
+    .page-header__inner { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .page-header__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; display: block; }
+    .page-header h1 { font-family: var(--font-head); font-size: clamp(1.9rem, 3.5vw, 2.8rem); color: var(--primary); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .page-header__meta { font-size: 0.82rem; color: var(--muted); }
+
+    /* CONTENT */
+    .content-wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+    .content h2 { font-family: var(--font-head); font-size: 1.35rem; color: var(--primary); letter-spacing: -0.01em; margin: 2em 0 0.7em; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 0.97rem; color: var(--text); line-height: 1.8; margin-bottom: 1.2em; }
+    .content ul { padding-left: 1.4em; margin-bottom: 1.2em; }
+    .content li { font-size: 0.97rem; line-height: 1.7; margin-bottom: 0.45em; color: var(--text); }
+    .content strong { color: var(--primary); font-weight: 600; }
+    .content a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+    /* CALLOUT */
+    .callout { border-left: 4px solid var(--accent); background: rgba(201,150,42,0.06); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 22px; margin-bottom: 32px; }
+    .callout p { margin-bottom: 0; font-size: 0.95rem; }
+
+    /* FOOTER */
+    .footer { background: var(--white); border-top: 1px solid var(--border); padding: 28px 0; }
+    .footer__inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer__left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .footer__copy { font-size: 0.82rem; color: var(--muted); }
+    .footer__links { display: flex; gap: 16px; }
+    .footer__links a { font-size: 0.82rem; color: var(--muted); transition: color 0.15s; }
+    .footer__links a:hover { color: var(--primary); }
+    .footer__links a.active { color: var(--primary); font-weight: 600; }
+    .footer__domain { font-size: 0.82rem; font-weight: 600; color: var(--accent); }
+
+    @media (max-width: 767px) { .nav__links { display: none; } .nav__hamburger { display: flex; } .footer__inner { flex-direction: column; align-items: flex-start; } .footer__left { flex-direction: column; gap: 10px; } }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">NRI Money<span> Guide</span></a>
+    <nav class="nav__links">
+      <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+      <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+      <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+      <a href="tools/nri-tax-estimator.html" class="nav__tool-link">🧮 Tax Estimator</a>
+    </nav>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="mobileNav">
+    <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+    <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+    <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+    <a href="tools/nri-tax-estimator.html">🧮 NRI Tax Estimator</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <div class="page-header__inner">
+    <span class="page-header__label">Legal</span>
+    <h1>Disclaimer</h1>
+    <p class="page-header__meta">Last updated: March 2026</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content">
+
+    <div class="callout">
+      <p><strong>Important:</strong> Nothing on NRI Money Guide constitutes tax, legal, or financial advice. Always consult a qualified Chartered Accountant or financial adviser before making any tax or investment decisions.</p>
+    </div>
+
+    <h2>1. Informational Purpose Only</h2>
+    <p>NRI Money Guide (<strong>nrimoneyguide.com</strong>) publishes articles, guides, and tools for general informational and educational purposes only. The content is designed to help NRIs understand concepts related to Indian taxation, investment, and banking — it is not a substitute for professional advice tailored to your individual circumstances.</p>
+    <p>Tax laws and financial regulations change frequently. While we make reasonable efforts to keep our content current, we cannot guarantee that all information is accurate, complete, or up to date at the time you read it.</p>
+
+    <h2>2. Not Tax or Legal Advice</h2>
+    <p>Nothing on this website should be construed as:</p>
+    <ul>
+      <li>Tax advice or guidance on your specific tax obligations</li>
+      <li>Legal advice regarding FEMA, RBI regulations, or any other law</li>
+      <li>Financial advice, investment recommendations, or portfolio guidance</li>
+      <li>A recommendation to buy, sell, or hold any financial product or asset</li>
+    </ul>
+    <p>Indian tax law is complex and highly dependent on individual circumstances, residential status, country of residence, applicable DTAA provisions, and the specific nature of each income source. Always engage a qualified Chartered Accountant (CA) or tax consultant who is familiar with NRI taxation before filing your ITR or making financial decisions.</p>
+
+    <h2>3. Tax Estimator Tool</h2>
+    <p>The NRI Tax Estimator tool available on this site provides <strong>rough estimates only</strong>, based on simplified assumptions and publicly available tax rules. It does not account for surcharges, DTAA exemptions, specific deductions, loss carry-forwards, complex income structures, or individual circumstances.</p>
+    <p>The estimated figures should not be relied upon for ITR filing, advance tax payments, or any financial planning without independent verification by a qualified professional.</p>
+
+    <h2>4. Accuracy and Currency of Information</h2>
+    <p>We make reasonable efforts to ensure our content reflects current Indian tax law, RBI regulations, and SEBI guidelines. However:</p>
+    <ul>
+      <li>Laws and regulations can change between when content is published and when you read it</li>
+      <li>Budget announcements, CBDT circulars, and court rulings may alter the position described in our articles</li>
+      <li>Interest rates, TDS thresholds, and exemption limits are subject to change by regulatory authority</li>
+    </ul>
+    <p>Always verify information against official government sources such as the <a href="https://www.incometax.gov.in" target="_blank" rel="noopener">Income Tax Department portal</a>, the <a href="https://www.rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a>, and <a href="https://www.sebi.gov.in" target="_blank" rel="noopener">SEBI</a> before acting on it.</p>
+
+    <h2>5. Affiliate and Advertising Disclosure</h2>
+    <p>Some links and references on this site may be affiliate links or sponsored placements. Where we earn a referral fee or commission from a financial product or service mentioned, we will note this. Our editorial content and assessments are not influenced by commercial relationships.</p>
+    <p>This site may display third-party advertisements served via Google AdSense or similar platforms. NRI Money Guide does not endorse any advertiser or their products and services.</p>
+
+    <h2>6. No Warranty</h2>
+    <p>This website and its content are provided "as is" without any warranty of any kind, express or implied. NRI Money Guide makes no warranty that the site will be error-free, uninterrupted, or free from viruses or other harmful components.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, NRI Money Guide and its authors, editors, and operators shall not be liable for any loss or damage — including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from reliance on information contained on this site.</p>
+
+    <h2>8. External Links</h2>
+    <p>This site may contain links to external websites. We are not responsible for the content, privacy practices, or accuracy of any third-party website. Links to external sites do not constitute an endorsement of those sites or their content.</p>
+
+    <h2>9. Contact</h2>
+    <p>If you have questions about this disclaimer or any content on this site, please <a href="contact.html">contact us</a>.</p>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <span class="footer__copy">© 2026 NRI Money Guide</span>
+      <nav class="footer__links">
+        <a href="disclaimer.html" class="active">Disclaimer</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <span class="footer__domain">nrimoneyguide.com</span>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', function () {
+    const open = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>

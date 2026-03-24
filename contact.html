@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact Us | NRI Money Guide</title>
+  <meta name="description" content="Get in touch with the NRI Money Guide team. Questions about our articles, corrections, or partnership enquiries."/>
+  <link rel="canonical" href="https://nrimoneyguide.com/contact/"/>
+  <meta name="robots" content="noindex,follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--primary:#1B2B5E;--accent:#C9962A;--surface:#FAFAF8;--text:#1A1A1A;--muted:#666;--border:#E0DDD5;--white:#fff;--font-head:'DM Serif Display',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;--shadow-sm:0 1px 3px rgba(0,0,0,.06);--shadow-md:0 4px 16px rgba(0,0,0,.08);--radius:10px}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--surface);-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    .nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
+    .nav__inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav__logo{font-family:var(--font-head);font-size:1.3rem;color:var(--primary)}
+    .nav__logo span{color:var(--accent)}
+    .nav__links{display:flex;align-items:center;gap:2px}
+    .nav__links a{font-size:.875rem;font-weight:500;color:var(--text);padding:6px 14px;border-radius:6px;transition:background .15s,color .15s}
+    .nav__links a:hover{background:var(--surface);color:var(--primary)}
+    .nav__tool-link{font-size:.8rem!important;font-weight:600!important;color:var(--accent)!important;border:1.5px solid var(--accent);padding:5px 12px!important;border-radius:6px;margin-left:6px}
+    .nav__tool-link:hover{background:var(--accent);color:var(--white)!important}
+    .nav__hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;cursor:pointer;border:none;background:none;padding:4px}
+    .nav__hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:transform .25s,opacity .25s}
+    .nav__hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav__hamburger.open span:nth-child(2){opacity:0}
+    .nav__hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav__mobile{display:none;flex-direction:column;border-top:1px solid var(--border);padding:12px 0 16px}
+    .nav__mobile.open{display:flex}
+    .nav__mobile a{font-size:.95rem;font-weight:500;color:var(--text);padding:10px 24px}
+    .page-header{background:var(--white);border-bottom:1px solid var(--border);padding:48px 0 40px}
+    .page-header__inner{max-width:900px;margin:0 auto;padding:0 24px}
+    .page-header__label{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
+    .page-header h1{font-family:var(--font-head);font-size:clamp(1.9rem,3.5vw,2.8rem);color:var(--primary);line-height:1.2;letter-spacing:-.02em;margin-bottom:12px}
+    .page-header p{font-size:1rem;color:var(--muted);max-width:480px}
+    .content-wrap{max-width:900px;margin:0 auto;padding:52px 24px 80px;display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+    .form-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px 28px;box-shadow:var(--shadow-md)}
+    .form-card h2{font-family:var(--font-head);font-size:1.35rem;color:var(--primary);margin-bottom:22px}
+    .form-group{margin-bottom:18px}
+    .form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:6px}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:var(--font-body);font-size:.92rem;color:var(--text);background:var(--surface);transition:border-color .15s,box-shadow .15s;resize:vertical}
+    .form-group textarea{min-height:120px}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(27,43,94,.09);background:var(--white)}
+    .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+    .submit-btn{width:100%;padding:13px;background:var(--primary);color:var(--white);border:none;border-radius:9px;font-family:var(--font-body);font-size:.95rem;font-weight:600;cursor:pointer;transition:background .15s,transform .15s;box-shadow:0 2px 10px rgba(27,43,94,.25);display:flex;align-items:center;justify-content:center;gap:8px}
+    .submit-btn:hover{background:#152250;transform:translateY(-1px)}
+    .form-note{font-size:.76rem;color:var(--muted);text-align:center;margin-top:12px;line-height:1.5}
+    .success-msg{display:none;text-align:center;padding:28px 16px}
+    .success-msg.show{display:block}
+    .success-msg__icon{font-size:2.4rem;margin-bottom:14px}
+    .success-msg h3{font-family:var(--font-head);font-size:1.35rem;color:var(--primary);margin-bottom:8px}
+    .success-msg p{font-size:.9rem;color:var(--muted);line-height:1.6}
+    .sidebar{display:flex;flex-direction:column;gap:18px}
+    .info-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px}
+    .info-card__title{font-family:var(--font-head);font-size:1.02rem;color:var(--primary);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    .info-card p{font-size:.87rem;color:var(--muted);line-height:1.65}
+    .info-card a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+    .info-card ul{padding-left:1.2em;margin-top:8px}
+    .info-card li{font-size:.87rem;color:var(--muted);margin-bottom:5px;line-height:1.55}
+    .resp-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(26,122,74,.09);color:#1a7a4a;font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:99px;margin-bottom:10px}
+    .resp-badge::before{content:'';display:block;width:6px;height:6px;border-radius:50%;background:#1a7a4a}
+    .popular-list{list-style:none;padding:0;margin-top:4px}
+    .popular-list li{border-bottom:1px solid var(--border)}
+    .popular-list li:last-child{border-bottom:none}
+    .popular-list a{display:block;padding:9px 0;font-size:.84rem;color:var(--text);transition:color .15s;line-height:1.4}
+    .popular-list a:hover{color:var(--primary)}
+    .tmini{font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:3px;margin-right:5px}
+    .tmini-tax{color:#1B2B5E;background:rgba(27,43,94,.08)}
+    .tmini-budget{color:#4a1a6b;background:rgba(74,26,107,.08)}
+    .footer{background:var(--white);border-top:1px solid var(--border);padding:28px 0}
+    .footer__inner{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer__left{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .footer__copy{font-size:.82rem;color:var(--muted)}
+    .footer__links{display:flex;gap:16px}
+    .footer__links a{font-size:.82rem;color:var(--muted);transition:color .15s}
+    .footer__links a:hover{color:var(--primary)}
+    .footer__links a.active{color:var(--primary);font-weight:600}
+    .footer__domain{font-size:.82rem;font-weight:600;color:var(--accent)}
+    @media(max-width:760px){.content-wrap{grid-template-columns:1fr;gap:28px}.sidebar{order:-1}}
+    @media(max-width:767px){.nav__links{display:none}.nav__hamburger{display:flex}.footer__inner{flex-direction:column;align-items:flex-start}.footer__left{flex-direction:column;gap:10px}}
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">NRI Money<span> Guide</span></a>
+    <nav class="nav__links">
+      <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+      <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+      <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+      <a href="tools/nri-tax-estimator.html" class="nav__tool-link">🧮 Tax Estimator</a>
+    </nav>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="mobileNav">
+    <a href="articles/nri-itr-filing-2025-26.html">Tax</a>
+    <a href="articles/nri-invest-indian-stocks.html">Invest</a>
+    <a href="articles/nre-nro-fcnr-comparison.html">Banking</a>
+    <a href="tools/nri-tax-estimator.html">🧮 NRI Tax Estimator</a>
+  </nav>
+</header>
+<div class="page-header">
+  <div class="page-header__inner">
+    <span class="page-header__label">Contact</span>
+    <h1>Get in touch</h1>
+    <p>Questions about our articles, factual corrections, or partnership enquiries — we read every message.</p>
+  </div>
+</div>
+<div class="content-wrap">
+  <div>
+    <div class="form-card" id="formWrap">
+      <h2>Send us a message</h2>
+      <div class="form-group">
+        <label for="fname">Your name</label>
+        <input type="text" id="fname" placeholder="Priya Mehta" autocomplete="name"/>
+      </div>
+      <div class="form-group">
+        <label for="femail">Email address</label>
+        <input type="email" id="femail" placeholder="priya@example.com" autocomplete="email"/>
+      </div>
+      <div class="form-group">
+        <label for="ftype">Type of enquiry</label>
+        <select id="ftype">
+          <option value="">Select...</option>
+          <option>Question about an article</option>
+          <option>Factual correction</option>
+          <option>FAST-DS / Budget 2026 question</option>
+          <option>Tax / ITR question</option>
+          <option>Partnership or advertising</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fmsg">Message</label>
+        <textarea id="fmsg" placeholder="Tell us what's on your mind..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="handleSubmit()">Send message →</button>
+      <p class="form-note">We typically respond within 2 business days. For urgent tax matters, please consult a qualified CA directly.</p>
+    </div>
+    <div class="success-msg" id="successMsg">
+      <div class="success-msg__icon">✅</div>
+      <h3>Message received</h3>
+      <p>Thanks for reaching out. We'll get back to you within 2 business days.<br/>In the meantime, check out our <a href="articles/budget-2026-nri-changes.html" style="color:var(--accent);text-decoration:underline">Budget 2026 NRI guide</a>.</p>
+    </div>
+  </div>
+  <aside class="sidebar">
+    <div class="info-card">
+      <div class="resp-badge">Typically 2 business days</div>
+      <div class="info-card__title"><span>📬</span> Response time</div>
+      <p>We respond to all genuine enquiries. For complex tax questions, we recommend also consulting a qualified Chartered Accountant — our guides are informational and not a substitute for professional advice.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-card__title"><span>🔥</span> Most asked right now</div>
+      <ul class="popular-list">
+        <li><a href="articles/budget-2026-fast-ds-foreign-assets.html"><span class="tmini tmini-budget">Budget 2026</span>FAST-DS amnesty — do I qualify?</a></li>
+        <li><a href="articles/budget-2026-nri-changes.html"><span class="tmini tmini-budget">Budget 2026</span>New Income Tax Act — what changes</a></li>
+        <li><a href="articles/nri-itr-filing-2025-26.html"><span class="tmini tmini-tax">Tax</span>NRI ITR filing 2025-26</a></li>
+        <li><a href="articles/dtaa-india-uae.html"><span class="tmini tmini-tax">Tax</span>DTAA India-UAE explained</a></li>
+        <li><a href="tools/nri-tax-estimator.html"><span class="tmini tmini-tax">Tool</span>Free NRI tax estimator</a></li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <div class="info-card__title"><span>⚠️</span> We can't help with</div>
+      <ul>
+        <li>Personalised tax advice or ITR filing</li>
+        <li>CA services or representation</li>
+        <li>Legal disputes or notices</li>
+        <li>Accessing your IT portal or bank accounts</li>
+      </ul>
+      <p style="margin-top:10px">For these, please engage a qualified CA with NRI tax expertise.</p>
+    </div>
+  </aside>
+</div>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <span class="footer__copy">© 2026 NRI Money Guide</span>
+      <nav class="footer__links">
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+    <span class="footer__domain">nrimoneyguide.com</span>
+  </div>
+</footer>
+<script>
+  const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobileNav');
+  hamburger.addEventListener('click',function(){const o=mobileNav.classList.toggle('open');hamburger.classList.toggle('open',o);hamburger.setAttribute('aria-expanded',o);});
+  function handleSubmit(){
+    const name=document.getElementById('fname').value.trim();
+    const email=document.getElementById('femail').value.trim();
+    const msg=document.getElementById('fmsg').value.trim();
+    if(!name||!email||!msg){alert('Please fill in your name, email, and message.');return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Please enter a valid email address.');return;}
+    document.getElementById('formWrap').style.display='none';
+    document.getElementById('successMsg').classList.add('show');
+  }
+</script>
+</body>
+</html>

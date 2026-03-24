@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ══════════════════════════════════════════════════
+       Homepage — priority 1.0
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://nrimoneyguide.com/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       Tool / Hub pages — priority 0.8
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://nrimoneyguide.com/tools/nri-tax-estimator/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════════════
+       Article pages — priority 0.6
+       Budget 2026 (new, highest freshness signal)
+  ══════════════════════════════════════════════════ -->
+  <url>
+    <loc>https://nrimoneyguide.com/articles/budget-2026-nri-changes/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/articles/budget-2026-fast-ds-foreign-assets/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tax articles -->
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nri-itr-filing-2025-26/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/articles/dtaa-india-uae/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/articles/budget-2025-nri-changes/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Property articles -->
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nri-selling-property/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nri-home-loan/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Invest articles -->
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nri-mutual-fund-taxation/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nri-invest-indian-stocks/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nri-ppf-rules/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Banking articles -->
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nre-nro-fcnr-comparison/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/articles/nre-fixed-deposit/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal / utility pages — lower priority, no need in most sitemaps
+       but included for completeness and crawl coverage -->
+  <url>
+    <loc>https://nrimoneyguide.com/disclaimer/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/privacy/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nrimoneyguide.com/contact/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
