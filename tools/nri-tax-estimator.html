@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NRI Income Tax Estimator 2025-26 | Free Tool</title>
+  <meta name="description" content="Free NRI income tax estimator for FY 2025-26. Enter NRO interest, rental income, and capital gains — get an instant breakdown of your Indian tax liability." />
+  <link rel="canonical" href="https://nrimoneyguide.com/tools/nri-tax-estimator/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NRI Money Guide" />
+  <meta property="og:title" content="NRI Income Tax Estimator 2025-26 | Free Tool" />
+  <meta property="og:description" content="Free NRI income tax estimator for FY 2025-26. Enter your Indian income sources and get an instant tax breakdown." />
+  <meta property="og:url" content="https://nrimoneyguide.com/tools/nri-tax-estimator/" />
+  <meta property="og:image" content="https://nrimoneyguide.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"NRI Income Tax Estimator 2025-26","url":"https://nrimoneyguide.com/tools/nri-tax-estimator/","description":"Free tool to estimate Indian income tax liability for NRIs in FY 2025-26. Covers NRO interest, rental income, equity and debt capital gains.","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"publisher":{"@type":"Organization","name":"NRI Money Guide","url":"https://nrimoneyguide.com"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do NRIs get the Section 87A rebate?","acceptedAnswer":{"@type":"Answer","text":"No. NRIs are not eligible for the Section 87A rebate that makes income up to ₹7 lakh effectively tax-free for resident Indians. NRIs pay tax from the first rupee above ₹3 lakh under the new regime."}},{"@type":"Question","name":"What is the tax rate on NRO interest for NRIs?","acceptedAnswer":{"@type":"Answer","text":"NRO interest is taxed at 30% for NRIs, with TDS deducted by the bank automatically. If you have a DTAA certificate and your country of residence has a lower treaty rate, you can claim a reduced rate."}},{"@type":"Question","name":"How is rental income taxed for NRIs?","acceptedAnswer":{"@type":"Answer","text":"NRI rental income gets a standard deduction of 30% (for repairs and maintenance) before being taxed at your applicable income slab rate. Municipal taxes paid can also be deducted from the gross rent."}},{"@type":"Question","name":"What is the LTCG tax on equity mutual funds for NRIs?","acceptedAnswer":{"@type":"Answer","text":"Long-term capital gains (held over 12 months) from equity mutual funds are taxed at 12.5% above the annual exemption limit of ₹1.25 lakh. Short-term gains (under 12 months) are taxed at 20%."}},{"@type":"Question","name":"Does a UAE NRI pay zero tax in India?","acceptedAnswer":{"@type":"Answer","text":"No. While the UAE has no personal income tax, NRIs living in UAE still pay Indian tax on India-sourced income: NRO interest, rental income, and capital gains from Indian assets. The India-UAE DTAA prevents double taxation but does not eliminate Indian tax."}}]}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1B2B5E; --accent: #C9962A; --surface: #FAFAF8;
+      --text: #1A1A1A; --muted: #666666; --border: #E0DDD5; --white: #ffffff;
+      --green: #1a7a4a; --green-bg: rgba(26,122,74,0.08);
+      --font-head: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06); --shadow-md: 0 4px 16px rgba(0,0,0,0.09);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.12); --radius: 10px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--text); background: var(--surface); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAV */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .nav__inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav__logo { font-family: var(--font-head); font-size: 1.3rem; color: var(--primary); }
+    .nav__logo span { color: var(--accent); }
+    .nav__links { display: flex; align-items: center; gap: 2px; }
+    .nav__links a { font-size: 0.875rem; font-weight: 500; color: var(--text); padding: 6px 14px; border-radius: 6px; transition: background 0.15s, color 0.15s; }
+    .nav__links a:hover { background: var(--surface); color: var(--primary); }
+    .nav__links a.active { color: var(--accent); font-weight: 600; }
+    .nav__hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; cursor: pointer; border: none; background: none; padding: 4px; border-radius: 6px; }
+    .nav__hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav__mobile { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 12px 0 16px; }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { font-size: 0.95rem; font-weight: 500; color: var(--text); padding: 10px 24px; }
+
+    /* PAGE HERO */
+    .tool-hero { background: linear-gradient(135deg, var(--primary) 0%, #253e80 100%); padding: 48px 0 40px; }
+    .tool-hero__inner { max-width: 900px; margin: 0 auto; padding: 0 24px; text-align: center; }
+    .tool-hero__badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--accent); background: rgba(201,150,42,0.15); border: 1px solid rgba(201,150,42,0.3); padding: 4px 12px; border-radius: 99px; margin-bottom: 20px; }
+    .tool-hero h1 { font-family: var(--font-head); font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--white); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 14px; }
+    .tool-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto; }
+
+    /* AD SLOT */
+    .ad-slot { background: #f0ede8; border: 1px dashed var(--border); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; height: 90px; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* MAIN WRAP */
+    .main-wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    .ad-above-tool { margin-bottom: 36px; }
+
+    /* TOOL CARD */
+    .tool-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow-md); overflow: hidden; }
+    .tool-card__header { background: var(--primary); padding: 22px 28px; display: flex; align-items: center; gap: 14px; }
+    .tool-card__icon { width: 44px; height: 44px; background: rgba(201,150,42,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+    .tool-card__header h2 { font-family: var(--font-head); font-size: 1.3rem; color: var(--white); }
+    .tool-card__header p { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-top: 2px; }
+
+    .tool-body { padding: 32px 28px; }
+
+    /* FORM GRID */
+    .form-section-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+    .form-section-title::before { content: ''; display: block; width: 3px; height: 14px; background: var(--accent); border-radius: 2px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 28px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 6px; }
+    .form-group label .tooltip-icon { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: var(--border); border-radius: 50%; font-size: 0.65rem; color: var(--muted); cursor: help; position: relative; }
+    .form-group label .tooltip-icon:hover::after { content: attr(data-tip); position: absolute; left: 22px; top: 50%; transform: translateY(-50%); background: var(--primary); color: var(--white); font-size: 0.72rem; padding: 6px 10px; border-radius: 6px; white-space: nowrap; z-index: 10; font-weight: 400; max-width: 240px; white-space: normal; line-height: 1.4; }
+    .input-wrap { position: relative; }
+    .input-wrap .prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 0.9rem; font-weight: 600; color: var(--muted); pointer-events: none; }
+    .input-wrap input { width: 100%; padding: 10px 12px 10px 28px; border: 1.5px solid var(--border); border-radius: 8px; font-family: var(--font-body); font-size: 0.92rem; color: var(--text); background: var(--surface); transition: border-color 0.15s, box-shadow 0.15s; -moz-appearance: textfield; }
+    .input-wrap input::-webkit-outer-spin-button, .input-wrap input::-webkit-inner-spin-button { -webkit-appearance: none; }
+    .input-wrap input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(27,43,94,0.1); background: var(--white); }
+    .form-group select { width: 100%; padding: 10px 12px; border: 1.5px solid var(--border); border-radius: 8px; font-family: var(--font-body); font-size: 0.92rem; color: var(--text); background: var(--surface); transition: border-color 0.15s; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+    .form-group select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(27,43,94,0.1); }
+
+    /* RADIO GROUP */
+    .radio-group { display: flex; gap: 12px; flex-wrap: wrap; }
+    .radio-label { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 9px 16px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.88rem; font-weight: 500; color: var(--text); transition: border-color 0.15s, background 0.15s; }
+    .radio-label input { accent-color: var(--primary); }
+    .radio-label:has(input:checked) { border-color: var(--primary); background: rgba(27,43,94,0.04); color: var(--primary); font-weight: 600; }
+
+    /* UAE TOOLTIP */
+    .uae-note { display: none; background: rgba(201,150,42,0.08); border: 1px solid rgba(201,150,42,0.25); border-radius: 8px; padding: 12px 16px; font-size: 0.82rem; color: #7a4e00; margin-top: 8px; line-height: 1.55; }
+    .uae-note.show { display: block; }
+
+    /* CALCULATE BUTTON */
+    .calc-btn { width: 100%; padding: 15px; background: var(--primary); color: var(--white); border: none; border-radius: 10px; font-family: var(--font-head); font-size: 1.1rem; cursor: pointer; transition: background 0.15s, transform 0.15s, box-shadow 0.15s; box-shadow: 0 3px 12px rgba(27,43,94,0.3); margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .calc-btn:hover { background: #152250; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(27,43,94,0.35); }
+    .calc-btn:active { transform: translateY(0); }
+
+    /* RESULTS */
+    .results { display: none; margin-top: 32px; border-top: 2px solid var(--border); padding-top: 32px; }
+    .results.show { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    .results__total { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; background: var(--primary); border-radius: var(--radius); padding: 24px 28px; margin-bottom: 24px; }
+    .results__total-label { font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .results__total-amount { font-family: var(--font-head); font-size: 2.4rem; color: var(--white); letter-spacing: -0.02em; line-height: 1; }
+    .results__eff-rate { text-align: right; }
+    .results__eff-rate-label { font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+    .results__eff-rate-value { font-family: var(--font-head); font-size: 1.8rem; color: var(--accent); }
+
+    /* BREAKDOWN TABLE */
+    .breakdown-title { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .breakdown-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); margin-bottom: 20px; }
+    .breakdown-table thead { background: #f5f3ef; }
+    .breakdown-table thead th { padding: 10px 14px; text-align: left; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+    .breakdown-table tbody tr { border-bottom: 1px solid var(--border); }
+    .breakdown-table tbody tr:last-child { border-bottom: none; font-weight: 600; background: rgba(27,43,94,0.04); }
+    .breakdown-table tbody td { padding: 11px 14px; vertical-align: top; line-height: 1.4; }
+    .breakdown-table tbody td:first-child { color: var(--text); }
+    .breakdown-table tbody td:last-child { font-weight: 600; color: var(--primary); text-align: right; }
+    .breakdown-table tbody td:nth-child(2) { color: var(--muted); }
+    .breakdown-table tbody td:nth-child(3) { color: var(--muted); text-align: center; }
+    .row-zero td { color: var(--muted) !important; font-weight: 400 !important; }
+
+    /* CTA */
+    .results__disclaimer { background: rgba(201,150,42,0.08); border: 1px solid rgba(201,150,42,0.2); border-radius: 8px; padding: 14px 18px; font-size: 0.82rem; color: #6b4c00; line-height: 1.6; margin-bottom: 20px; display: flex; gap: 10px; align-items: flex-start; }
+    .results__cta { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; }
+    .results__cta p { font-size: 0.88rem; color: var(--muted); }
+    .results__cta strong { display: block; font-size: 0.95rem; color: var(--text); margin-bottom: 3px; }
+    .btn-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--primary); color: var(--white); font-size: 0.88rem; font-weight: 600; padding: 11px 20px; border-radius: 8px; white-space: nowrap; transition: background 0.15s; }
+    .btn-cta:hover { background: #152250; }
+    .btn-reset { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: var(--muted); font-size: 0.82rem; font-weight: 500; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); cursor: pointer; margin-top: 12px; transition: border-color 0.15s, color 0.15s; }
+    .btn-reset:hover { border-color: var(--primary); color: var(--primary); }
+
+    /* EXPLAINER */
+    .explainer { margin-top: 52px; }
+    .explainer h2 { font-family: var(--font-head); font-size: 1.7rem; color: var(--primary); letter-spacing: -0.02em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+    .explainer h3 { font-family: var(--font-head); font-size: 1.15rem; color: var(--text); margin: 1.6em 0 0.5em; }
+    .explainer p { font-size: 0.97rem; color: var(--text); line-height: 1.8; margin-bottom: 1.2em; }
+    .explainer ul { padding-left: 1.4em; margin-bottom: 1.2em; }
+    .explainer li { margin-bottom: 0.5em; font-size: 0.97rem; line-height: 1.65; }
+    .explainer strong { color: var(--primary); font-weight: 600; }
+    .ad-below { margin: 36px 0; }
+
+    /* FAQ */
+    .faq { margin-top: 44px; }
+    .faq__title { font-family: var(--font-head); font-size: 1.6rem; color: var(--primary); letter-spacing: -0.02em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+    .faq__item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; background: var(--white); overflow: hidden; }
+    .faq__question { width: 100%; background: none; border: none; padding: 18px 20px; text-align: left; font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; color: var(--text); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; line-height: 1.4; }
+    .faq__question:hover { color: var(--primary); }
+    .faq__icon { flex-shrink: 0; width: 20px; height: 20px; background: rgba(27,43,94,0.06); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; color: var(--primary); font-weight: 700; transition: transform 0.25s; }
+    .faq__item.open .faq__icon { transform: rotate(45deg); color: var(--accent); background: rgba(201,150,42,0.1); }
+    .faq__answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq__answer-inner { padding: 0 20px 18px; font-size: 0.92rem; color: var(--muted); line-height: 1.75; border-top: 1px solid var(--border); }
+    .faq__item.open .faq__answer { max-height: 400px; }
+
+    /* FOOTER */
+    .footer { background: var(--white); border-top: 1px solid var(--border); padding: 28px 0; margin-top: 64px; }
+    .footer__inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer__left { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .footer__copy { font-size: 0.82rem; color: var(--muted); }
+    .footer__links { display: flex; gap: 16px; }
+    .footer__links a { font-size: 0.82rem; color: var(--muted); transition: color 0.15s; }
+    .footer__links a:hover { color: var(--primary); }
+    .footer__domain { font-size: 0.82rem; font-weight: 600; color: var(--accent); }
+
+    @media (max-width: 680px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .tool-body { padding: 24px 20px; }
+      .results__total { padding: 18px 20px; }
+      .results__total-amount { font-size: 1.9rem; }
+      .nav__links { display: none; } .nav__hamburger { display: flex; }
+      .footer__inner { flex-direction: column; align-items: flex-start; }
+      .footer__left { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo">NRI Money<span> Guide</span></a>
+    <nav class="nav__links">
+      <a href="../articles/nri-itr-filing-2025-26.html">Tax</a>
+      <a href="../articles/nri-invest-indian-stocks.html">Invest</a>
+      <a href="../articles/nre-nro-fcnr-comparison.html">Banking</a>
+      <a href="nri-tax-estimator.html" class="active">🧮 Tax Estimator</a>
+    </nav>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="mobileNav">
+    <a href="../articles/nri-itr-filing-2025-26.html">Tax</a>
+    <a href="../articles/nri-invest-indian-stocks.html">Invest</a>
+    <a href="../articles/nre-nro-fcnr-comparison.html">Banking</a>
+    <a href="nri-tax-estimator.html">🧮 NRI Tax Estimator</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="tool-hero">
+  <div class="tool-hero__inner">
+    <div class="tool-hero__badge">Free Tool · FY 2025-26</div>
+    <h1>NRI Income Tax Estimator 2025-26</h1>
+    <p>Enter your Indian income sources — NRO interest, rental income, capital gains — and get an instant estimated tax breakdown with the new Budget 2025 slabs.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <!-- Ad above tool -->
+  <div id="ad-above-tool" class="ad-slot ad-above-tool">Advertisement</div>
+
+  <!-- TOOL CARD -->
+  <div class="tool-card">
+    <div class="tool-card__header">
+      <div class="tool-card__icon">🧮</div>
+      <div>
+        <h2>Tax Estimator</h2>
+        <p>Budget 2025 slabs · 4% cess · No Section 87A for NRIs</p>
+      </div>
+    </div>
+    <div class="tool-body">
+
+      <!-- Section 1: Status -->
+      <div class="form-section-title">Your Status</div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="residentialStatus">Residential Status</label>
+          <select id="residentialStatus">
+            <option value="nri">NRI (Non-Resident Indian)</option>
+            <option value="rnor">RNOR (Resident but Not Ordinarily Resident)</option>
+            <option value="returning">Returning NRI (now Resident)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dtaaCountry">Country of Residence</label>
+          <select id="dtaaCountry">
+            <option value="uae">UAE</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+            <option value="singapore">Singapore</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div id="uaeNote" class="uae-note show">
+        🇦🇪 <strong>UAE NRI note:</strong> NRE account interest is exempt from Indian tax and is not included in this calculator. NRO interest at 30% still applies. The India-UAE DTAA may allow you to claim a reduced rate on NRO interest — speak to a CA.
+      </div>
+
+      <!-- Section 2: Income -->
+      <div class="form-section-title" style="margin-top:28px;">Indian Income (FY 2025-26)</div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="nroInterest">NRO Interest Income
+            <span class="tooltip-icon" data-tip="Interest earned on NRO savings, current, or FD accounts. Taxed at 30% flat. NRE and FCNR interest is already tax-free and not entered here.">?</span>
+          </label>
+          <div class="input-wrap"><span class="prefix">₹</span><input type="number" id="nroInterest" placeholder="0" min="0" /></div>
+        </div>
+        <div class="form-group">
+          <label for="rentalIncome">Rental Income from Indian Property
+            <span class="tooltip-icon" data-tip="Annual gross rent received from any property located in India. A 30% standard deduction is automatically applied before tax is calculated.">?</span>
+          </label>
+          <div class="input-wrap"><span class="prefix">₹</span><input type="number" id="rentalIncome" placeholder="0" min="0" /></div>
+        </div>
+        <div class="form-group">
+          <label for="equityLtcg">Equity Mutual Fund / Stocks — LTCG
+            <span class="tooltip-icon" data-tip="Long-term capital gains from listed equity shares or equity mutual funds held over 12 months. Taxed at 12.5% above ₹1.25 lakh exemption.">?</span>
+          </label>
+          <div class="input-wrap"><span class="prefix">₹</span><input type="number" id="equityLtcg" placeholder="0" min="0" /></div>
+        </div>
+        <div class="form-group">
+          <label for="equityStcg">Equity Mutual Fund / Stocks — STCG
+            <span class="tooltip-icon" data-tip="Short-term capital gains from listed equity shares or equity mutual funds held 12 months or less. Taxed at 20%.">?</span>
+          </label>
+          <div class="input-wrap"><span class="prefix">₹</span><input type="number" id="equityStcg" placeholder="0" min="0" /></div>
+        </div>
+        <div class="form-group">
+          <label for="debtMF">Debt Mutual Fund Gains
+            <span class="tooltip-icon" data-tip="Gains from debt mutual funds purchased after April 2023. Taxed at your applicable income slab rate regardless of holding period.">?</span>
+          </label>
+          <div class="input-wrap"><span class="prefix">₹</span><input type="number" id="debtMF" placeholder="0" min="0" /></div>
+        </div>
+        <div class="form-group">
+          <label for="propertyLtcg">Property Sale — LTCG
+            <span class="tooltip-icon" data-tip="Long-term capital gains from selling Indian property held for more than 24 months. Taxed at 12.5% flat (post-July 2024, no indexation).">?</span>
+          </label>
+          <div class="input-wrap"><span class="prefix">₹</span><input type="number" id="propertyLtcg" placeholder="0" min="0" /></div>
+        </div>
+      </div>
+
+      <!-- Section 3: Regime -->
+      <div class="form-section-title">Tax Regime</div>
+      <div class="form-group" style="margin-bottom: 28px;">
+        <div class="radio-group">
+          <label class="radio-label"><input type="radio" name="regime" value="new" checked /> New Regime (Default, FY 2025-26)</label>
+          <label class="radio-label"><input type="radio" name="regime" value="old" /> Old Regime (Opt-in)</label>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calcBtn" onclick="calculateTax()">
+        Calculate My Tax <span>→</span>
+      </button>
+
+      <!-- RESULTS -->
+      <div class="results" id="results">
+        <div class="results__total">
+          <div>
+            <div class="results__total-label">Estimated Tax Liability</div>
+            <div class="results__total-amount" id="totalTax">₹0</div>
+          </div>
+          <div class="results__eff-rate">
+            <div class="results__eff-rate-label">Effective Rate</div>
+            <div class="results__eff-rate-value" id="effRate">0%</div>
+          </div>
+        </div>
+
+        <div class="breakdown-title">Tax Breakdown</div>
+        <table class="breakdown-table">
+          <thead>
+            <tr><th>Income Source</th><th>Taxable Amount</th><th>Rate</th><th>Tax</th></tr>
+          </thead>
+          <tbody id="breakdownBody"></tbody>
+        </table>
+
+        <div class="results__disclaimer">
+          <span>⚠️</span>
+          <span>This is an <strong>estimate only</strong> based on simplified rules. Surcharge, DTAA relief, specific deductions, and complex income scenarios are not fully modelled. Consult a qualified CA before filing your ITR.</span>
+        </div>
+
+        <div class="results__cta">
+          <div>
+            <strong>Need accurate NRI ITR filing?</strong>
+            <p>Our step-by-step guide walks you through the full process — free.</p>
+          </div>
+          <a href="../articles/nri-itr-filing-2025-26.html" class="btn-cta">Get help filing your NRI ITR →</a>
+        </div>
+
+        <button class="btn-reset" onclick="resetTool()">↺ Reset calculator</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AD BELOW TOOL -->
+  <div id="ad-below-tool" class="ad-slot ad-below" style="margin-top:36px;">Advertisement</div>
+
+  <!-- EXPLAINER -->
+  <section class="explainer">
+    <h2>How NRI Taxation Works in FY 2025-26</h2>
+    <p>As a Non-Resident Indian, you are only liable to pay income tax in India on income that is <strong>earned or accrued in India</strong>. Your foreign salary, overseas bank interest, and international investments are not taxable in India and should not appear in your Indian Income Tax Return.</p>
+    <p>What <em>is</em> taxable are five main categories: NRO account interest, rental income from Indian property, capital gains from Indian assets (shares, mutual funds, property), dividends from Indian companies, and any salary received in India for work done in India.</p>
+
+    <h3>The New Tax Regime is Now Default</h3>
+    <p>Budget 2025 made the new tax regime the default for all taxpayers. If you do not actively opt for the old regime, you will be assessed under the new slabs. For most NRIs who have limited India-specific deductions, the new regime often results in lower tax — but always run both calculations if you have Indian property loan interest or significant 80C investments.</p>
+
+    <h3>NRIs Do Not Get Section 87A Rebate</h3>
+    <p>This is one of the most common misunderstandings. The Section 87A rebate makes income up to ₹7 lakh effectively tax-free for resident Indians. <strong>NRIs are explicitly excluded from this rebate.</strong> NRIs start paying tax from ₹3 lakh upward (under the new regime's basic exemption) with no rebate to offset the liability.</p>
+
+    <h3>Capital Gains Rates After July 2024</h3>
+    <p>Budget 2024 (effective 23 July 2024) introduced significant capital gains changes that carry into FY 2025-26. Equity LTCG moved to <strong>12.5% above ₹1.25 lakh per year</strong> (up from 10% above ₹1 lakh). Equity STCG rose to <strong>20%</strong> (from 15%). Property LTCG is now <strong>12.5% without indexation</strong> — the old 20% with indexation no longer applies to sales after 23 July 2024.</p>
+
+    <h3>TDS Is Deducted Automatically — Filing Allows Refunds</h3>
+    <p>Banks deduct TDS on NRO interest at 30% automatically. Brokers and AMCs deduct TDS on equity gains at redemption. Buyers of your property deduct TDS from the sale proceeds. All of this TDS is visible in your Form 26AS. When you file your ITR, if the TDS deducted exceeds your actual tax liability — which is common — the difference is refunded to your pre-validated bank account.</p>
+
+    <h3>Using DTAA to Reduce Tax</h3>
+    <p>If India has a Double Taxation Avoidance Agreement with your country of residence (the UAE, US, UK, Canada, and Singapore are all covered), you may be able to claim reduced rates on certain income types. The India-UAE DTAA, for example, caps TDS on NRO interest at 12.5% — lower than the standard 30%. To claim this, you need a Tax Residency Certificate from the UAE Federal Tax Authority and must file Form 10F and complete Schedules FSI and TR in your ITR-2.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2 class="faq__title">Frequently Asked Questions</h2>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">Do NRIs get the Section 87A rebate?<span class="faq__icon">+</span></button>
+      <div class="faq__answer"><div class="faq__answer-inner">No. NRIs are not eligible for the Section 87A rebate that makes income up to ₹7 lakh effectively tax-free for resident Indians. NRIs pay tax from the first rupee above ₹3 lakh under the new regime's basic exemption.</div></div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">What is the tax rate on NRO interest for NRIs?<span class="faq__icon">+</span></button>
+      <div class="faq__answer"><div class="faq__answer-inner">NRO interest is taxed at 30% for NRIs, with TDS deducted by the bank automatically. If you have a valid Tax Residency Certificate and your country has a DTAA with India at a lower rate (e.g., UAE at 12.5%), you can claim the treaty rate and a refund of the excess TDS.</div></div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">How is rental income taxed for NRIs?<span class="faq__icon">+</span></button>
+      <div class="faq__answer"><div class="faq__answer-inner">NRI rental income gets a standard deduction of 30% (covering maintenance and repairs) before being taxed at applicable income slab rates. Municipal taxes paid can also be deducted from gross rent. The net figure is then added to other slab-rate income and taxed accordingly.</div></div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">What is the LTCG tax on equity mutual funds for NRIs?<span class="faq__icon">+</span></button>
+      <div class="faq__answer"><div class="faq__answer-inner">Long-term capital gains from equity mutual funds (held over 12 months) are taxed at 12.5% above the annual exemption of ₹1.25 lakh. Short-term gains (under 12 months) are taxed at 20%. These rates apply from 23 July 2024 following Budget 2024 changes.</div></div>
+    </div>
+
+    <div class="faq__item">
+      <button class="faq__question" aria-expanded="false">Does a UAE NRI pay zero tax in India?<span class="faq__icon">+</span></button>
+      <div class="faq__answer"><div class="faq__answer-inner">No. The UAE has no personal income tax, but NRIs in UAE still pay Indian tax on India-sourced income: NRO interest at 30%, rental income at slab rates, and capital gains from Indian assets. The India-UAE DTAA prevents the same income from being taxed twice but does not eliminate Indian tax on India-sourced income.</div></div>
+    </div>
+  </section>
+
+</div><!-- /.main-wrap -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <span class="footer__copy">© 2026 NRI Money Guide</span>
+      <nav class="footer__links">
+        <a href="../disclaimer.html">Disclaimer</a>
+        <a href="../privacy.html">Privacy Policy</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <span class="footer__domain">nrimoneyguide.com</span>
+  </div>
+</footer>
+
+<script>
+// ── NAV ──
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', function () {
+  const open = mobileNav.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+});
+
+// ── DTAA Note toggle ──
+document.getElementById('dtaaCountry').addEventListener('change', function () {
+  document.getElementById('uaeNote').classList.toggle('show', this.value === 'uae');
+});
+
+// ── Indian number format ──
+function fmtINR(n) {
+  if (n === 0) return '₹0';
+  const num = Math.round(n);
+  const s = Math.abs(num).toString();
+  let result = '';
+  if (s.length <= 3) {
+    result = s;
+  } else {
+    result = s.slice(-3);
+    let rem = s.slice(0, s.length - 3);
+    while (rem.length > 2) {
+      result = rem.slice(-2) + ',' + result;
+      rem = rem.slice(0, rem.length - 2);
+    }
+    result = rem + ',' + result;
+  }
+  return (num < 0 ? '-' : '') + '₹' + result;
+}
+
+function fmtPct(n) {
+  return (Math.round(n * 10) / 10).toFixed(1) + '%';
+}
+
+// ── New regime slab calc ──
+function newRegimeSlab(income) {
+  if (income <= 300000) return 0;
+  let tax = 0;
+  const slabs = [
+    [300000,  700000, 0.05],
+    [700000,  1000000, 0.10],
+    [1000000, 1200000, 0.15],
+    [1200000, 1500000, 0.20],
+    [1500000, 2000000, 0.25],
+    [2000000, 2400000, 0.25],
+    [2400000, Infinity, 0.30]
+  ];
+  for (const [lo, hi, rate] of slabs) {
+    if (income > lo) {
+      tax += (Math.min(income, hi) - lo) * rate;
+    }
+  }
+  return tax;
+}
+
+// ── Old regime slab calc ──
+function oldRegimeSlab(income) {
+  if (income <= 250000) return 0;
+  let tax = 0;
+  const slabs = [
+    [250000,  500000, 0.05],
+    [500000,  1000000, 0.20],
+    [1000000, Infinity, 0.30]
+  ];
+  for (const [lo, hi, rate] of slabs) {
+    if (income > lo) {
+      tax += (Math.min(income, hi) - lo) * rate;
+    }
+  }
+  return tax;
+}
+
+function applySlabTax(income, regime) {
+  return regime === 'new' ? newRegimeSlab(income) : oldRegimeSlab(income);
+}
+
+function calculateTax() {
+  const regime = document.querySelector('input[name="regime"]:checked').value;
+  const nroInt = parseFloat(document.getElementById('nroInterest').value) || 0;
+  const rental = parseFloat(document.getElementById('rentalIncome').value) || 0;
+  const equityLtcg = parseFloat(document.getElementById('equityLtcg').value) || 0;
+  const equityStcg = parseFloat(document.getElementById('equityStcg').value) || 0;
+  const debtMF = parseFloat(document.getElementById('debtMF').value) || 0;
+  const propLtcg = parseFloat(document.getElementById('propertyLtcg').value) || 0;
+
+  const rows = [];
+
+  // 1. NRO Interest — 30% flat
+  const nroTax = nroInt * 0.30;
+  rows.push({ label: 'NRO Account Interest', taxable: nroInt, rate: '30% flat', tax: nroTax });
+
+  // 2. Rental — 30% standard deduction first, then slab
+  const rentalNet = rental * 0.70;
+  const rentalTax = applySlabTax(rentalNet, regime);
+  rows.push({ label: 'Rental Income (after 30% deduction)', taxable: rentalNet, rate: regime === 'new' ? 'New regime slabs' : 'Old regime slabs', tax: rentalTax });
+
+  // 3. Equity LTCG — 12.5% above 1.25L
+  const ltcgExemption = 125000;
+  const ltcgTaxable = Math.max(0, equityLtcg - ltcgExemption);
+  const ltcgTax = ltcgTaxable * 0.125;
+  rows.push({ label: 'Equity LTCG (above ₹1.25L exemption)', taxable: ltcgTaxable, rate: '12.5%', tax: ltcgTax });
+
+  // 4. Equity STCG — 20%
+  const stcgTax = equityStcg * 0.20;
+  rows.push({ label: 'Equity STCG', taxable: equityStcg, rate: '20%', tax: stcgTax });
+
+  // 5. Debt MF — slab rate
+  const debtTax = applySlabTax(debtMF, regime);
+  rows.push({ label: 'Debt Mutual Fund Gains', taxable: debtMF, rate: regime === 'new' ? 'New regime slabs' : 'Old regime slabs', tax: debtTax });
+
+  // 6. Property LTCG — 12.5% flat
+  const propTax = propLtcg * 0.125;
+  rows.push({ label: 'Property Sale LTCG', taxable: propLtcg, rate: '12.5%', tax: propTax });
+
+  const baseTax = rows.reduce((s, r) => s + r.tax, 0);
+  const cess = baseTax * 0.04;
+  const totalTax = baseTax + cess;
+  const totalIncome = nroInt + rental + equityLtcg + equityStcg + debtMF + propLtcg;
+  const effRate = totalIncome > 0 ? (totalTax / totalIncome) * 100 : 0;
+
+  // Render
+  document.getElementById('totalTax').textContent = fmtINR(totalTax);
+  document.getElementById('effRate').textContent = fmtPct(effRate);
+
+  const tbody = document.getElementById('breakdownBody');
+  tbody.innerHTML = '';
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    if (r.tax === 0) tr.classList.add('row-zero');
+    tr.innerHTML = `<td>${r.label}</td><td>${fmtINR(r.taxable)}</td><td>${r.rate}</td><td>${fmtINR(r.tax)}</td>`;
+    tbody.appendChild(tr);
+  });
+
+  // Cess row
+  const cessRow = document.createElement('tr');
+  cessRow.innerHTML = `<td>Health & Education Cess</td><td>${fmtINR(baseTax)}</td><td>4%</td><td>${fmtINR(cess)}</td>`;
+  tbody.appendChild(cessRow);
+
+  // Total row
+  const totRow = document.createElement('tr');
+  totRow.innerHTML = `<td><strong>Total Estimated Tax</strong></td><td></td><td></td><td>${fmtINR(totalTax)}</td>`;
+  tbody.appendChild(totRow);
+
+  const results = document.getElementById('results');
+  results.classList.add('show');
+  results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function resetTool() {
+  ['nroInterest','rentalIncome','equityLtcg','equityStcg','debtMF','propertyLtcg'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('residentialStatus').value = 'nri';
+  document.getElementById('dtaaCountry').value = 'uae';
+  document.getElementById('uaeNote').classList.add('show');
+  document.querySelector('input[name="regime"][value="new"]').checked = true;
+  window.scrollTo({ top: document.querySelector('.tool-card').offsetTop - 80, behavior: 'smooth' });
+}
+
+// FAQ accordion
+document.querySelectorAll('.faq__question').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const item = btn.closest('.faq__item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
