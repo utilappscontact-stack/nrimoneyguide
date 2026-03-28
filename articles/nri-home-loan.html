@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Ezoic Privacy + Header Scripts — must be FIRST in <head> -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+<script>
+  window.ezstandalone = window.ezstandalone || {};
+  ezstandalone.cmd = ezstandalone.cmd || [];
+</script>
+<script src="//ezoicanalytics.com/analytics.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZG74ZF2Y"></script>
   <script>
@@ -161,7 +171,15 @@ tbody td:first-child { font-weight: 500; color: var(--primary); }
 @media (max-width: 960px) { .page-wrap { grid-template-columns: 1fr; gap: 40px; } .sidebar { position: static; } .sidebar__ad { min-height: 90px; } .related__grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 767px) { .nav__links { display: none; } .nav__hamburger { display: flex; } .article-header h1 { font-size: 1.65rem; } .related__grid { grid-template-columns: 1fr; } .footer__inner { flex-direction: column; align-items: flex-start; } .footer__left { flex-direction: column; gap: 10px; } }
 
-  </style>
+  
+/* Adsterra responsive switching */
+.ad-desktop { display: block; }
+.ad-mobile  { display: none; }
+@media (max-width: 768px) {
+  .ad-desktop { display: none !important; }
+  .ad-mobile  { display: block !important; }
+}
+</style>
 </head>
 <body>
 <header class="nav">
@@ -207,7 +225,17 @@ tbody td:first-child { font-weight: 500; color: var(--primary); }
     <article class="article-body">
       <p>Buying property in India while living abroad is a common goal for NRIs — whether as a future retirement home, a rental investment, or simply to maintain roots in India. An NRI home loan makes this financially accessible without having to transfer a large lump sum from abroad.</p>
       <p>The process is more paperwork-intensive than for residents, but it is entirely manageable if you know what is required upfront. This guide walks through eligibility, rates, documents, and the EMI structure.</p>
-      <div id="ad-mid" class="ad-slot">Advertisement</div>
+      <!-- Adsterra: leaderboard responsive -->
+<div style="text-align:center;margin:20px auto 8px" role="complementary" aria-label="Advertisement">
+  <div class="ad-desktop">
+    <script>atOptions={'key':'e7359575c6b5af3b856213173fdfecb9','format':'iframe','height':90,'width':728,'params':{}};</script>
+    <script src="https://www.highperformanceformat.com/e7359575c6b5af3b856213173fdfecb9/invoke.js"></script>
+  </div>
+  <div class="ad-mobile">
+    <script>atOptions={'key':'f354949c7406003f0bc3ef0e8100c2b8','format':'iframe','height':50,'width':320,'params':{}};</script>
+    <script src="https://www.highperformanceformat.com/f354949c7406003f0bc3ef0e8100c2b8/invoke.js"></script>
+  </div>
+</div>
       <h2 id="can-nris-get">Can NRIs Get Home Loans in India?</h2>
       <p>Yes. NRI home loans are offered by all major scheduled banks (SBI, HDFC Bank, ICICI, Axis, Kotak) and dedicated Housing Finance Companies (HFCs) like LIC Housing Finance, PNB Housing, and HDFC Ltd (now merged with HDFC Bank). The loans are governed by RBI guidelines under FEMA and the National Housing Bank's NRI lending norms.</p>
       <p>NRIs can purchase residential properties, plots, and under-construction properties. Agricultural land, farmhouses, and plantation properties cannot be purchased by NRIs under FEMA.</p>
@@ -311,7 +339,11 @@ tbody td:first-child { font-weight: 500; color: var(--primary); }
         </a></div></section>
   </main>
   <aside class="sidebar">
-    <div id="ad-sidebar" class="sidebar__ad">Advertisement</div>
+    <!-- Adsterra: sidebar 300x250 -->
+<div style="text-align:center" role="complementary" aria-label="Advertisement">
+  <script>atOptions={'key':'e3b50c5403cf1127b254ed6551de3f4f','format':'iframe','height':250,'width':300,'params':{}};</script>
+    <script src="https://www.highperformanceformat.com/e3b50c5403cf1127b254ed6551de3f4f/invoke.js"></script>
+</div>
     <div class="sidebar__tool-promo">
       <strong>NRI Tax Estimator</strong>
       <p>Calculate your estimated Indian tax liability in 2 minutes. Free, no login.</p>

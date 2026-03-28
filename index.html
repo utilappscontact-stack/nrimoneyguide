@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Ezoic Privacy + Header Scripts — must be FIRST in <head> -->
+<script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+<script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+<script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+<script>
+  window.ezstandalone = window.ezstandalone || {};
+  ezstandalone.cmd = ezstandalone.cmd || [];
+</script>
+<script src="//ezoicanalytics.com/analytics.js"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWZG74ZF2Y"></script>
   <script>
@@ -205,7 +215,15 @@
     @media (max-width:900px)  { .articles__grid { grid-template-columns:repeat(2,1fr); } .hero__budget-cards { grid-template-columns:1fr 1fr; } .budget-section__grid { grid-template-columns:1fr; } }
     @media (max-width:767px)  { .nav__links{display:none;} .nav__hamburger{display:flex;} .hero{padding:44px 0 38px;} .hero__budget-cards{grid-template-columns:1fr;} .articles__grid,.articles__grid--4{grid-template-columns:1fr;} .articles{padding:40px 0 48px;} .footer__inner{flex-direction:column;align-items:flex-start;} .footer__left{flex-direction:column;gap:10px;} .trust__item{padding:3px 10px;font-size:0.76rem;} .tool-strip__inner{flex-direction:column;align-items:flex-start;} .alert-strip__inner{flex-direction:column;gap:8px;} .budget-section__cta{flex-direction:column;} }
     @media (max-width:480px)  { .hero__ctas{flex-direction:column;} .btn{justify-content:center;} }
-  </style>
+  
+/* Adsterra responsive switching */
+.ad-desktop { display: block; }
+.ad-mobile  { display: none; }
+@media (max-width: 768px) {
+  .ad-desktop { display: none !important; }
+  .ad-mobile  { display: block !important; }
+}
+</style>
 </head>
 <body>
 
@@ -277,7 +295,17 @@
         <a href="articles/budget-2026-nri-changes.html" class="btn btn--primary">All Budget 2026 changes <span class="btn__arr">→</span></a>
         <a href="tools/nri-tax-estimator.html" class="btn btn--accent">🧮 Estimate my tax <span class="btn__arr">→</span></a>
       </div>
-      <div id="ad-hero" role="complementary" aria-label="Advertisement">Advertisement</div>
+      <!-- Adsterra: leaderboard responsive -->
+<div style="text-align:center;margin:20px auto 8px" role="complementary" aria-label="Advertisement">
+  <div class="ad-desktop">
+    <script>atOptions={'key':'e7359575c6b5af3b856213173fdfecb9','format':'iframe','height':90,'width':728,'params':{}};</script>
+    <script src="https://www.highperformanceformat.com/e7359575c6b5af3b856213173fdfecb9/invoke.js"></script>
+  </div>
+  <div class="ad-mobile">
+    <script>atOptions={'key':'f354949c7406003f0bc3ef0e8100c2b8','format':'iframe','height':50,'width':320,'params':{}};</script>
+    <script src="https://www.highperformanceformat.com/f354949c7406003f0bc3ef0e8100c2b8/invoke.js"></script>
+  </div>
+</div>
     </div>
   </div>
 </section>
